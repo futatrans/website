@@ -1,0 +1,49 @@
+@import url('https://api.fontshare.com/v2/css?f[]=synonym@300,400,500,600,700,900&f[]=amulya@500,700,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuration des polices avec fallback */
+@layer base {
+  html {
+    font-family: 'Amulya', 'Arial', sans-serif;
+  }
+  
+  body {
+    font-family: 'Amulya', 'Arial', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Synonym', 'Arial', sans-serif;
+
+  }
+}
+
+/* Test pour vérifier le chargement des polices */
+.font-test {
+  font-family: 'Amulya', 'Arial', sans-serif;
+}
+
+.font-test-heading {
+  font-family: 'Synonym', 'Arial', sans-serif;
+}
+
+img, video {
+  max-width: none !important;
+}
+
+/* Annuler la transformation de texte sur le titre principal */
+.intro-title {
+  text-transform: none !important;
+}
+
+/* S'assurer que seule la première lettre est en majuscule */
+.intro-title::first-letter {
+  text-transform: uppercase;
+}
