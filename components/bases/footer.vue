@@ -99,13 +99,13 @@
                 </div>
                 <ul class="list-area">
                   <li>
-                    <a href="#">Pour les usagers</a>
+                    <a href="#" style="text-transform: none !important;">Pour les usagers</a>
                   </li>
                   <li>
-                    <a href="#">Pour les conducteurs</a>
+                    <a href="#" style="text-transform: none !important;">Pour les conducteurs</a>
                   </li>
                   <li>
-                    <a href="#">Pour la planète</a>
+                    <a href="#" style="text-transform: none !important;">Pour la planète</a>
                   </li>
                 </ul>
               </div>
@@ -125,16 +125,16 @@
                 </div>
                 <ul class="list-area">
                   <li>
-                    <a href="#">À propos</a>
+                    <a href="#" style="text-transform: none !important;">À propos</a>
                   </li>
                   <li>
-                    <a href="#">FAQ</a>
+                    <a href="#" style="text-transform: none !important;">FAQ</a>
                   </li>
                   <li>
-                    <a href="#">Mentions légales</a>
+                    <a href="#" style="text-transform: none !important;">Mentions légales</a>
                   </li>
                   <li>
-                    <a href="#">Politique de confidentialité</a>
+                    <a href="#" style="text-transform: none !important;">Politique de confidentialité</a>
                   </li>
                   
                 </ul>

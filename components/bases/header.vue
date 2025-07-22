@@ -20,7 +20,9 @@
               </div>
             </div>
             <p class="text d-none d-xl-block">
-              FUTA TRANS révolutionne le transport en Afrique avec une solution de paiement mobile sécurisée pour les conducteurs et les passagers.
+              FUTA TRANS révolutionne le transport en Afrique avec une solution
+              de paiement mobile sécurisée pour les conducteurs et les
+              passagers.
             </p>
             <div class="mobile-menu fix mb-3"></div>
             <div class="offcanvas__contact">
@@ -31,9 +33,7 @@
                     <i class="fal fa-map-marker-alt"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#"
-                      >Kinshasa-Gombe, RDC</a
-                    >
+                    <a target="_blank" href="#">Kinshasa-Gombe, RDC</a>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -68,7 +68,9 @@
               <div class="header-button mt-4">
                 <a href="#" class="theme-btn text-center">
                   <span
-                    >Télécharger l'app<i class="fa-solid fa-arrow-right-long"></i
+                    >Télécharger l'app<i
+                      class="fa-solid fa-arrow-right-long"
+                    ></i
                   ></span>
                 </a>
               </div>
@@ -102,23 +104,17 @@
                 <div class="mean__menu-wrapper">
                   <div class="main-menu">
                     <nav id="mobile-menu">
-                      <ul> 
+                      <ul>
                         <li>
-                          <a href="#">Pour les usagers</a>
+                          <a href="#usagers">Pour les usagers</a>
                         </li>
                         <li>
-                          <a href="#">
-                            Pour les conducteurs
-                          </a>
-                          
-                        </li>
-                       
-                        
-                        <li>
-                          <a href="#">Pour la planete</a>
+                          <a href="#conducteurs"> Pour les conducteurs </a>
                         </li>
 
-                       
+                        <li>
+                          <a href="#planete">Pour la planete</a>
+                        </li>
                       </ul>
                     </nav>
                   </div>
@@ -127,12 +123,28 @@
               <div
                 class="header-right d-flex justify-content-end align-items-center"
               >
-               
                 <div class="header-button ms-4">
-                  <a href="#" class="theme-btn">
+                  <a
+                    href="#"
+                    class="theme-btn flex justify-center items-center"
+                  >
+                    <span> Télécharger </span>
+
                     <span>
-                      Télécharger
-                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        />
+                      </svg>
                     </span>
                   </a>
                 </div>

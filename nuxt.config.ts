@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'FutaTrans - Transport et Logistique',
+      title: 'FUTA TRANS - Transport payé en un clic, en toute sécurité',
       meta: [
         // Métadonnées de base
         { charset: 'utf-8' },
@@ -42,25 +42,59 @@ export default defineNuxtConfig({
         { name: 'author', content: 'FUTA TRANS' },
         { name: 'robots', content: 'index, follow' },
         
-        // Open Graph (Facebook, LinkedIn)
+        // Open Graph (Facebook, LinkedIn, WhatsApp)
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'FUTA TRANS - Transport payé en un clic, en toute sécurité' },
         { property: 'og:description', content: "Application mobile de paiement pour motos-taxis, taxis et clients. Sécurité, traçabilité, mobilité moderne et programmes verts pour l'Afrique." },
-        { property: 'og:image', content: '/og-image.jpg' },
+        { property: 'og:image', content: '/img/cover.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:type', content: 'image/png' },
+        { property: 'og:image:alt', content: 'FUTA TRANS - Application de transport et paiement mobile' },
         { property: 'og:url', content: 'https://futatrans.com' },
         { property: 'og:site_name', content: 'FUTA TRANS' },
         { property: 'og:locale', content: 'fr_FR' },
+        { property: 'og:locale:alternate', content: 'en_US' },
         
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'FUTA TRANS - Transport payé en un clic, en toute sécurité' },
         { name: 'twitter:description', content: "Application mobile de paiement pour motos-taxis, taxis et clients. Sécurité, traçabilité, mobilité moderne et programmes verts pour l'Afrique." },
-        { name: 'twitter:image', content: '/twitter-image.jpg' },
+        { name: 'twitter:image', content: '/img/cover.png' },
+        { name: 'twitter:image:alt', content: 'FUTA TRANS - Application de transport et paiement mobile' },
         { name: 'twitter:site', content: '@futatrans' },
+        { name: 'twitter:creator', content: '@futatrans' },
+        
+        // LinkedIn
+        { property: 'linkedin:owner', content: 'futatrans' },
+        { property: 'linkedin:image', content: '/img/cover.png' },
+        
+        // WhatsApp
+        { property: 'og:image:secure_url', content: 'https://futatrans.com/img/cover.png' },
+        
+        // Pinterest
+        { name: 'pinterest-rich-pin', content: 'true' },
+        
+        // Discord
+        { property: 'discord:image', content: '/img/cover.png' },
+        
+        // Telegram
+        { property: 'telegram:image', content: '/img/cover.png' },
+        
+        // Reddit
+        { property: 'reddit:image', content: '/img/cover.png' },
+        
+        // Tumblr
+        { property: 'tumblr:image', content: '/img/cover.png' },
+        
+        // Réseaux sociaux africains
+        { property: 'snapchat:image', content: '/img/cover.png' },
+        { property: 'tiktok:image', content: '/img/cover.png' },
+        { property: 'instagram:image', content: '/img/cover.png' },
         
         // Métadonnées supplémentaires
-        { name: 'theme-color', content: '#1a365d' },
-        { name: 'msapplication-TileColor', content: '#1a365d' },
+        { name: 'theme-color', content: '#0A3A3C' },
+        { name: 'msapplication-TileColor', content: '#0A3A3C' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
         { name: 'apple-mobile-web-app-title', content: 'FUTA TRANS' },
@@ -78,19 +112,19 @@ export default defineNuxtConfig({
         
         // Sécurité
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" },
+        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;" },
         
         // Performance
         { name: 'mobile-web-app-capable', content: 'yes' },
-        { name: 'application-name', content: 'FutaTrans' },
+        { name: 'application-name', content: 'FUTA TRANS' },
         
         // Métadonnées spécifiques au transport
-        { name: 'business:contact_data:street_address', content: '123 Rue du Transport' },
-        { name: 'business:contact_data:locality', content: 'Paris' },
-        { name: 'business:contact_data:postal_code', content: '75001' },
-        { name: 'business:contact_data:country_name', content: 'France' },
-        { name: 'business:contact_data:phone_number', content: '+33 1 23 45 67 89' },
-        { name: 'business:contact_data:email', content: 'contact@futatrans.com' }
+        { name: 'business:contact_data:street_address', content: 'Kinshasa-Gombe' },
+        { name: 'business:contact_data:locality', content: 'Kinshasa' },
+        { name: 'business:contact_data:postal_code', content: '' },
+        { name: 'business:contact_data:country_name', content: 'RDC' },
+        { name: 'business:contact_data:phone_number', content: '+243 817 039 144' },
+        { name: 'business:contact_data:email', content: 'hello@futatrans.com' }
       ],
       
       link: [
@@ -100,6 +134,9 @@ export default defineNuxtConfig({
         { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
         { rel: 'manifest', href: '/favicon/site.webmanifest' },
+        
+        // Préchargement de l'image de couverture
+        { rel: 'preload', as: 'image', href: '/img/cover.png' },
         
         // CSS critiques - chargement avant le rendu
         { rel: 'stylesheet', href: '/vendors/css/bootstrap.min.css' },

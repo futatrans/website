@@ -4,7 +4,7 @@
     <section class="advantage-section fix">
       <div class="advantage-container-wrapper style1">
         <div class="container">
-          <div class="advantage-wrapper style1 section-padding" style="background-color: #0a3a3c0c;">
+          <div class="advantage-wrapper style1 section-padding overflow-hidden" style="background-color: #0a3a3c0c;">
             <div class="container xl:mx-[200px]">
               <div class="row gy-5 d-flex align-items-center">
                 <div class="col-xl-6 order-2 order-xl-1">
@@ -66,7 +66,7 @@
                       data-wow-delay=".6s"
                       href="#download-app"
                     >
-                      Télécharger l'application
+                      Télécharger l'app
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -97,20 +97,14 @@
                       data-tilt
                       data-tilt-max="10"
                     >
-                      <img src="/img/mockups/IMG_4431.png" alt="thumb" />
+                      <img src="/img/mockups/wcuThumb1_1-1.png" class="w-[250px] lg:w-[800px]" alt="thumb" />
                     </div>
-                    <div
-                      class="thumb2 img-custom-anim-right wow fadeInRight"
-                      data-wow-delay=".4s"
-                      data-tilt
-                      data-tilt-max="15"
-                    >
-                      <img src="/img/mockups/IMG_4432.png" alt="thumb" />
-                    </div>
-                    <div class="shape1">
+                    
+                    <div class="shape1" style="width: 250px !important; max-width: 250px !important;">
                       <img
                         src="/vendors/images/shape/advanceThumbShape1_1.png"
                         alt="shape"
+                        class="-ml-[200px]"
                       />
                     </div>
                   </div>

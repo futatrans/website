@@ -3,8 +3,7 @@
         <section>
             <SectionsHome1 />
             <SectionsHome2 />
-            <SectionsHome3 />
-            <SectionsHome4 />
+            <SectionsHome4 class="mt-24" />
             <SectionsHome5 />
             <SectionsHomeCta />
         </section>

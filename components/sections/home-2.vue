@@ -1,7 +1,11 @@
 <template>
-    <div>
+    <div class="relative">
+
+        <div id="usagers" class="-top-[200px] absolute">
+
+        </div>
  <!-- About Us Section S T A R T -->
- <section class="about-section fix">
+ <section class="about-section fix" >
         <div class="about-container-wrapper style1">
             <div class="container">
                 <div class="about-wrapper style1">
@@ -18,10 +22,10 @@
                                 <div class="thumbShape4 d-none d-xxl-block cir36"><img
                                         src="/vendors/images/shape/aboutThumbShape1_4.png" alt="shape"></div>
                                 <div class="main-thumb">
-                                    <img src="/img/mockups/futa-person.png" alt="thumb">
+                                    <img src="/img/mockups/futa-person.png" class="w-[250px] lg:w-[300px] xl:w-auto" alt="thumb">
                                 </div>
                                 <div class="absolute-thumb float-bob-x">
-                                    <img src="/img/mockups/qr.png" class="w-[250px]" alt="thumb">
+                                    <img src="/img/mockups/qr.png" class="w-[100px] sm:w-[250px]" alt="thumb">
                                 </div>
 
                             </div>
@@ -30,7 +34,7 @@
                             <div class="about-content">
                                 <div class="section-title">
                                     <div class="subtitle wow fadeInUp" data-wow-delay=".2s" style="text-transform: none !important;">
-                                        Pour les usagers <img src="/vendors/images/icon/fireIcon.svg" alt="icon">
+                                       Fonctionnalités <img src="/vendors/images/icon/fireIcon.svg" alt="icon">
                                     </div>
                                     <h2 class="title wow fadeInUp" data-wow-delay=".4s" style="text-transform: none !important;">Pour les usagers</h2>
                                     <p class="section-desc wow fadeInUp max-w-[550px]" data-wow-delay=".6s">FUTA TRANS, c’est la liberté de se déplacer sans dépendre de la monnaie physique grâce à
@@ -43,7 +47,7 @@
                                     <li class="flex justify-start items-center"><img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon"> Vous roulez plus sereinement, sans vous soucier du rendu de monnaie ou des pertes d'argent</li>
                                     <li class="flex justify-start items-center"><img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon"> Vous bénéficiez d'un service rapide, fluide et moderne</li>
                                 </ul>
-                                <a class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s" href="#download-app">Télécharger l'application
+                                <a class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s" href="#download-app">Télécharger l'app
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                         fill="none">
                                         <g clip-path="url(#clip0_18_41)">

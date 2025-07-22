@@ -30,7 +30,10 @@
                           animation-name: fadeInUp;
                         "
                       >
-                      Pourquoi choisir FUTA TRANS ?
+                      <span class="flex items-center justify-start">
+                      Pourquoi <span class="hidden sm:block ml-2">FUTA TRANS ?</span>
+
+                      </span>
                         <img
                           src="/vendors/images/icon/fireIcon.svg"
                           alt="icon"
@@ -61,13 +64,13 @@
                       un allié économique pour toute une génération de conducteurs et de citoyens.  
                     </p>
                     </div>
-                    <div class="flex justify-start items-center">
+                    <div class="flex justify-center sm:justify-start items-center sm:flex-row flex-col">
                         <a class="playstore" href="#"
                       ><img
                         src="/vendors/images/cta/ctaplayStore1_1.png"
                         alt="img"
                     /></a>
-                    <a href="https://www.apple.com/store"
+                    <a class="playstore" href="https://www.apple.com/store"
                       ><img
                         src="/vendors/images/cta/ctaAppleStore1_1.png"
                         alt="img"
@@ -85,10 +88,11 @@
                       animation-name: fadeInUp;
                     "
                   >
-                   <div class="xl:-ml-32">
+                   <div class="-ml-8 xl:-ml-32">
                     <img
                       src="/img/mockups/ctaThumb1_1.png"
                       alt="thumb"
+                      class="w-[350px] lg:w-auto"
                     />
                    </div>
                   </div>
@@ -101,7 +105,7 @@
     </section>
 
     <!-- Brand Slider Section S T A R T -->
-    <div class="brand-slider-section mt-24 fix">
+    <div class="brand-slider-section my-24 fix">
       <div class="brand-slider-container-wrapper style1">
         <div class="container">
           <div class="brand-slider-wrapper style1">
@@ -121,8 +125,21 @@
                 <p class="mt-4 text-lg">
                     Rejoignez le mouvement et faites partie de la révolution du transport en Afrique.
                 </p>
+<div class="flex justify-center items-center mt-8">
+
+    <a class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s" href="#download-app">
+        <span>
+            Nous contacter
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+</svg>
+
+                                </a>
+</div>
             </div>
             </div>
+            <!--
             <div class="row">
               <div class="slider-area brandSliderOne">
                 <div
@@ -195,6 +212,8 @@
                 </div>
               </div>
             </div>
+            -->
+
           </div>
         </div>
       </div>
