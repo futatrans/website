@@ -1,14 +1,16 @@
 <template>
   <div class="relative">
-
-    <div id="download-app" class="-top-[200px] absolute">
-
-</div>
+    <div id="download-app" class="-top-[200px] absolute"></div>
     <section class="cta-section" id="app">
       <div class="cta-container-wrapper style1">
         <div class="container">
-          <div class="cta-wrapper style1 section-padding fix bg-[#0A3A3C]" style="background-image: url(&quot;assets/images/shape/counterShape1_1.png&quot;) !important;">
-            <div class="shape1 d-none d-xxl-block"> 
+          <div
+            class="cta-wrapper style1 section-padding fix bg-[#0A3A3C]"
+            style="
+              background-image: url('assets/images/shape/counterShape1_1.png') !important;
+            "
+          >
+            <div class="shape1 d-none d-xxl-block">
               <img src="/vendors/images/shape/ctaShape1_1.png" alt="shape" />
             </div>
             <div class="shape2 d-none d-xxl-block">
@@ -34,10 +36,10 @@
                           animation-name: fadeInUp;
                         "
                       >
-                      <span class="flex items-center justify-start">
-                      Pourquoi <span class="hidden sm:block ml-2">FUTA TRANS ?</span>
-
-                      </span>
+                        <span class="flex items-center justify-start">
+                          Pourquoi
+                          <span class="hidden sm:block ml-2">FUTA TRANS ?</span>
+                        </span>
                         <img
                           src="/vendors/images/icon/fireIcon.svg"
                           alt="icon"
@@ -64,21 +66,25 @@
                           animation-name: fadeInUp;
                         "
                       >
-                      FUTA TRANS, c'est un outil technologique, un levier social, un accélérateur écologique et
-                      un allié économique pour toute une génération de conducteurs et de citoyens.  
-                    </p>
+                        FUTA TRANS, c'est un outil technologique, un levier
+                        social, un accélérateur écologique et un allié
+                        économique pour toute une génération de conducteurs et
+                        de citoyens.
+                      </p>
                     </div>
-                    <div class="flex justify-center sm:justify-start items-center sm:flex-row flex-col">
-                        <a class="playstore" href="#"
-                      ><img
-                        src="/vendors/images/cta/ctaplayStore1_1.png"
-                        alt="img"
-                    /></a>
-                    <a class="playstore" href="https://www.apple.com/store"
-                      ><img
-                        src="/vendors/images/cta/ctaAppleStore1_1.png"
-                        alt="img"
-                    /></a>
+                    <div
+                      class="flex justify-center sm:justify-start items-center sm:flex-row flex-col"
+                    >
+                      <a class="playstore" href="#"
+                        ><img
+                          src="/vendors/images/cta/ctaplayStore1_1.png"
+                          alt="img"
+                      /></a>
+                      <a class="playstore" href="https://www.apple.com/store"
+                        ><img
+                          src="/vendors/images/cta/ctaAppleStore1_1.png"
+                          alt="img"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -92,13 +98,13 @@
                       animation-name: fadeInUp;
                     "
                   >
-                   <div class="-ml-8 xl:-ml-32">
-                    <img
-                      src="/img/mockups/ctaThumb1_1.png"
-                      alt="thumb"
-                      class="w-[350px] lg:w-auto"
-                    />
-                   </div>
+                    <div class="-ml-8 xl:-ml-32">
+                      <img
+                        src="/img/mockups/ctaThumb1_1.png"
+                        alt="thumb"
+                        class="w-[350px] lg:w-auto"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -113,42 +119,49 @@
       <div class="brand-slider-container-wrapper style1">
         <div class="container">
           <div class="brand-slider-wrapper style1">
-            <div class="text-center ">
-
-                
-                <h2
-              class="single-section-title wow fadeInUp"
-              data-wow-delay=".2s"
-              style="text-transform: none !important"
-            >
-             <span class="text-5xl">
-                Nos partenaires
-             </span>
-            </h2>
-            <div class="max-w-[500px] mx-auto">
+            <div class="text-center">
+              <h2
+                class="single-section-title wow fadeInUp"
+                data-wow-delay=".2s"
+                style="text-transform: none !important"
+              >
+                <span class="text-5xl"> Nos partenaires </span>
+              </h2>
+              <div class="max-w-[500px] mx-auto">
                 <p class="mt-4 text-lg">
-                    Rejoignez le mouvement et faites partie de la révolution du transport en Afrique.
+                  Rejoignez le mouvement et faites partie de la révolution du
+                  transport en Afrique.
                 </p>
-<div class="flex justify-center items-center mt-8">
-
-    <a href="mailto:hello@futatrans.com" class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s">
-       <div class="flex items-center justify-center">
-        <div>
-            <span>
-            Nous contacter
-        </span>
-        </div>
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-</svg>
-        </div>
-       </div>
-        
-
-                                </a>
-</div>
-            </div>
+                <div class="flex justify-center items-center mt-8">
+                  <a
+                    href="mailto:hello@futatrans.com"
+                    class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]"
+                    data-wow-delay=".2s"
+                  >
+                    <div class="flex items-center justify-center">
+                      <div>
+                        <span> Nous contacter </span>
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
             <!--
             <div class="row">
@@ -224,7 +237,6 @@
               </div>
             </div>
             -->
-
           </div>
         </div>
       </div>
@@ -233,28 +245,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, nextTick } from "vue";
 
-const brandSlider = ref(null)
+const brandSlider = ref(null);
 
 onMounted(async () => {
   // Attendre que le DOM soit complètement rendu
-  await nextTick()
-  
+  await nextTick();
+
   // Initialisation explicite du slider après le montage du composant
   if (process.client && brandSlider.value) {
     // Forcer le rendu immédiat des images
-    const images = brandSlider.value.querySelectorAll('img')
-    images.forEach(img => {
+    const images = brandSlider.value.querySelectorAll("img");
+    images.forEach((img) => {
       if (img.complete) {
-        img.style.opacity = '1'
+        img.style.opacity = "1";
       } else {
-        img.addEventListener('load', () => {
-          img.style.opacity = '1'
-        })
+        img.addEventListener("load", () => {
+          img.style.opacity = "1";
+        });
       }
-    })
-    
+    });
+
     // Attendre que Swiper soit disponible
     const initSlider = () => {
       if (window.Swiper) {
@@ -267,36 +279,36 @@ onMounted(async () => {
           breakpoints: {
             0: {
               slidesPerView: 1,
-              spaceBetween: 20
+              spaceBetween: 20,
             },
             576: {
               slidesPerView: 2,
               centeredSlides: true,
-              spaceBetween: 30
+              spaceBetween: 30,
             },
             768: {
               slidesPerView: 3,
-              spaceBetween: 40
+              spaceBetween: 40,
             },
             1025: {
               slidesPerView: 4,
-              spaceBetween: 50
+              spaceBetween: 50,
             },
             1400: {
               slidesPerView: 5,
-              spaceBetween: 60
-            }
-          }
-        })
+              spaceBetween: 60,
+            },
+          },
+        });
       } else {
         // Si Swiper n'est pas encore chargé, réessayer dans 100ms
-        setTimeout(initSlider, 100)
+        setTimeout(initSlider, 100);
       }
-    }
-    
-    initSlider()
+    };
+
+    initSlider();
   }
-})
+});
 </script>
 
 <style scoped>
@@ -361,7 +373,7 @@ onMounted(async () => {
 
 /* Préchargement des images avec placeholder */
 .brand-logo::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

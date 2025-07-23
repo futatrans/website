@@ -322,6 +322,12 @@ JS TABLE OF CONTENTS
             if ($("body")) {
                 const e = document.querySelector(".cursor-inner"),
                     t = document.querySelector(".cursor-outer");
+                
+                // Vérifier si les éléments de curseur existent avant de continuer
+                if (!e || !t) {
+                    return; // Sortir de la fonction si les éléments n'existent pas
+                }
+                
                 let n,
                     i = 0,
                     o = !1;
@@ -335,13 +341,17 @@ JS TABLE OF CONTENTS
                         (i = s.clientX);
                 }),
                     $("body").on("mouseenter", "a, .cursor-pointer", function () {
-                        e.classList.add("cursor-hover");
-                        t.classList.add("cursor-hover");
+                        if (e && t) {
+                            e.classList.add("cursor-hover");
+                            t.classList.add("cursor-hover");
+                        }
                     }),
                     $("body").on("mouseleave", "a, .cursor-pointer", function () {
-                        ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
-                            (e.classList.remove("cursor-hover"),
-                                t.classList.remove("cursor-hover"));
+                        if (e && t) {
+                            ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
+                                (e.classList.remove("cursor-hover"),
+                                    t.classList.remove("cursor-hover"));
+                        }
                     }),
                     (e.style.visibility = "visible"),
                     (t.style.visibility = "visible");

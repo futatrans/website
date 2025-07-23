@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/custom.css'],
   modules: [
     '@nuxt/image',
     '@nuxt/scripts',
@@ -111,7 +111,7 @@ export default defineNuxtConfig({
         
         // Sécurité
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;" },
+        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://api.fontshare.com https://cdn.fontshare.com https://fonts.gstatic.com;" },
         
         // Performance
         { name: 'mobile-web-app-capable', content: 'yes' },
@@ -141,7 +141,6 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: '/vendors/css/bootstrap.min.css' },
         { rel: 'stylesheet', href: '/vendors/css/all.min.css' },
         { rel: 'stylesheet', href: '/vendors/css/main.css' },
-        { rel: 'stylesheet', href: '/assets/css/custom.css' },
         
         // Préconnexions pour les performances
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

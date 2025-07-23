@@ -173,6 +173,10 @@
   display: block !important;
   margin: 0 auto !important;
   transition: all 0.3s ease !important;
+  /* S'assurer que l'image reste visible après l'animation */
+  opacity: 1 !important;
+  clip-path: inset(0 0 0 0) !important;
+  transform: translateX(0) !important;
 }
 
 /* Responsive forcé avec !important */
@@ -216,6 +220,20 @@
     width: 250px !important;
     max-width: 65% !important;
   }
+}
+
+/* S'assurer que l'image reste visible après l'animation */
+.futa-mockup-responsive.img-custom-anim-right {
+  animation-fill-mode: forwards !important;
+}
+
+/* Fallback pour s'assurer que l'image est toujours visible */
+.futa-mockup-responsive.img-custom-anim-right,
+.futa-mockup-responsive.wow.fadeInUp {
+  opacity: 1 !important;
+  clip-path: inset(0 0 0 0) !important;
+  transform: translateX(0) !important;
+  visibility: visible !important;
 }
 
 </style>

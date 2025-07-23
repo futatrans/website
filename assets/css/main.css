@@ -20,19 +20,12 @@
   h4,
   h5,
   h6 {
-    font-family: 'Synonym', 'Arial', sans-serif;
+    font-family: 'Amulya', 'Arial', sans-serif;
 
   }
 }
 
-/* Test pour vérifier le chargement des polices */
-.font-test {
-  font-family: 'Amulya', 'Arial', sans-serif;
-}
 
-.font-test-heading {
-  font-family: 'Synonym', 'Arial', sans-serif;
-}
 
 img, video {
   max-width: none !important;

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Offcanvas Area Start -->
     <div class="fix-area">
       <div class="offcanvas__info">
         <div class="offcanvas__wrapper">
@@ -9,12 +8,12 @@
               class="offcanvas__top mb-5 d-flex justify-content-between align-items-center"
             >
               <div class="offcanvas__logo">
-                <a href="#">
+                <a href="#" @click="handleLinkClick">
                   <img src="/img/logo/logo-white.png" alt="logo-img" />
                 </a>
               </div>
               <div class="offcanvas__close">
-                <button>
+                <button @click="closeOffcanvas">
                   <i class="fas fa-times"></i>
                 </button>
               </div>
@@ -33,7 +32,7 @@
                     <i class="fal fa-map-marker-alt"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#">Kinshasa-Gombe, RDC</a>
+                    <a target="_blank" href="#" @click="handleLinkClick">Kinshasa-Gombe, RDC</a>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -41,7 +40,7 @@
                     <i class="fal fa-envelope"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a href="mailto:hello@futatrans.com"
+                    <a href="mailto:hello@futatrans.com" @click="handleLinkClick"
                       ><span class="mailto:hello@futatrans.com"
                         >hello@futatrans.com</span
                       ></a
@@ -53,7 +52,7 @@
                     <i class="fal fa-clock"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#">Lun-Ven, 08h - 18h</a>
+                    <a target="_blank" href="#" @click="handleLinkClick">Lun-Ven, 08h - 18h</a>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -61,12 +60,12 @@
                     <i class="far fa-phone"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a href="tel:+243817039144">+243 817 039 144</a>
+                    <a href="tel:+243817039144" @click="handleLinkClick">+243 817 039 144</a>
                   </div>
                 </li>
               </ul>
               <div class="header-button mt-4">
-                <a href="#" class="theme-btn text-center">
+                <a href="#" class="theme-btn text-center" @click="handleLinkClick">
                   <span
                     >Télécharger l'app<i
                       class="fa-solid fa-arrow-right-long"
@@ -75,17 +74,17 @@
                 </a>
               </div>
               <div class="social-icon d-flex align-items-center">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" @click="handleLinkClick"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" @click="handleLinkClick"><i class="fab fa-twitter"></i></a>
+                <a href="#" @click="handleLinkClick"><i class="fab fa-youtube"></i></a>
+                <a href="#" @click="handleLinkClick"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay" @click="handleLinkClick"></div>
 
     <!-- Header Section Start -->
     <header class="header-section-1">
@@ -106,14 +105,14 @@
                     <nav id="mobile-menu">
                       <ul>
                         <li>
-                          <a href="#usagers">Pour les usagers</a>
+                          <a href="#usagers" @click="handleMenuLinkClick">Pour les usagers</a>
                         </li>
                         <li>
-                          <a href="#conducteurs"> Pour les conducteurs </a>
+                          <a href="#conducteurs" @click="handleMenuLinkClick"> Pour les conducteurs </a>
                         </li>
 
                         <li>
-                          <a href="#planete">Pour la planete</a>
+                          <a href="#planete" @click="handleMenuLinkClick">Pour la planete</a>
                         </li>
                       </ul>
                     </nav>
@@ -127,6 +126,7 @@
                   <a
                     href="#download-app"
                     class="theme-btn flex justify-center items-center"
+                    @click="handleLinkClick"
                   >
 
                  <div class="flex items-center justify-center">
@@ -170,6 +170,67 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Fonction simple pour fermer l'offcanvas en utilisant jQuery
+const closeOffcanvas = () => {
+  // Utiliser jQuery directement si disponible
+  if (typeof $ !== 'undefined') {
+    $(".offcanvas__info").removeClass("info-open");
+    $(".offcanvas__overlay").removeClass("overlay-open");
+  } else {
+    // Fallback vanilla JavaScript
+    const offcanvas = document.querySelector('.offcanvas__info')
+    const overlay = document.querySelector('.offcanvas__overlay')
+    
+    if (offcanvas) {
+      offcanvas.classList.remove('info-open')
+    }
+    
+    if (overlay) {
+      overlay.classList.remove('overlay-open')
+    }
+  }
+}
+
+// Fonction pour gérer les clics sur les liens
+const handleLinkClick = (event) => {
+  // Fermer l'offcanvas en premier
+  closeOffcanvas()
+  
+  // Empêcher le comportement par défaut pour les liens internes
+  if (event.target.href && event.target.href.includes('#')) {
+    event.preventDefault()
+  }
+  
+  // Pour les liens mailto et tel, laisser le comportement par défaut
+  if (event.target.href && (event.target.href.includes('mailto:') || event.target.href.includes('tel:'))) {
+    return
+  }
+  
+  // S'assurer que l'offcanvas est bien fermé
+  setTimeout(() => {
+    closeOffcanvas()
+  }, 100)
+}
+
+// Fonction spécifique pour les liens du menu principal
+const handleMenuLinkClick = (event) => {
+  // Fermer l'offcanvas immédiatement
+  closeOffcanvas()
+  
+  // Empêcher le comportement par défaut
+  event.preventDefault()
+  
+  // Fermer l'offcanvas une seconde fois pour s'assurer
+  setTimeout(() => {
+    closeOffcanvas()
+  }, 50)
+  
+  // Fermer l'offcanvas une troisième fois pour être sûr
+  setTimeout(() => {
+    closeOffcanvas()
+  }, 200)
+}
+</script>
 
 <style scoped></style>
