@@ -58,9 +58,10 @@
                     >
                       <a
                         class="theme-btn flex justify-center items-center"
-                        href="#"
+                        href="#download-app"
                       >
-                        <span> Télécharger </span>
+                        <div class="flex items-center justify-center">
+                            <span> Télécharger </span>
 
                         <span>
                           <svg
@@ -78,13 +79,18 @@
                             />
                           </svg>
                         </span>
+                        </div>
                       </a>
                       <a
                         class="theme-btn style2 wow fadeInUp flex justify-center items-center"
                         data-wow-delay=".2s"
-                        href="#"
+                        href="#usagers"
                       >
-                        <span> En savoir plus </span>
+                        <div class="flex items-center justify-center">
+                            <div>
+                            <span> En savoir plus </span>
+
+                            </div>
                         <div>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +106,7 @@
                               d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25"
                             />
                           </svg>
+                        </div>
                         </div>
                       </a>
                     </div>

@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div class="relative">
+
+    <div id="planete" class="-top-[200px] absolute">
+
+</div>
     <section class="what-we-do-section fix section-padding">
       <div class="container mxw-1450">
         <div class="what-we-wrapper" ">

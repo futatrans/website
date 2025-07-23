@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <!-- Advantage Section S T A R T -->
+  <div class="relative">
+
+    <div id="conducteurs" class="-top-[200px] absolute">
+
+</div>
     <section class="advantage-section fix">
       <div class="advantage-container-wrapper style1">
         <div class="container">
@@ -66,8 +69,16 @@
                       data-wow-delay=".6s"
                       href="#download-app"
                     >
-                      Télécharger l'app
-                      <svg
+                    <div class="flex items-center justify-center">
+                        <div>
+<span>
+    Télécharger l'app
+
+</span>
+                    </div>
+                      <div>
+                        <span>
+                            <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
@@ -86,6 +97,9 @@
                           </clipPath>
                         </defs>
                       </svg>
+                        </span>
+                      </div>
+                    </div>
                     </a>
                   </div>
                 </div>

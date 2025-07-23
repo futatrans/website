@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div class="relative">
+
+    <div id="download-app" class="-top-[200px] absolute">
+
+</div>
     <section class="cta-section" id="app">
       <div class="cta-container-wrapper style1">
         <div class="container">
@@ -127,13 +131,20 @@
                 </p>
 <div class="flex justify-center items-center mt-8">
 
-    <a class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s" href="#download-app">
-        <span>
+    <a href="mailto:hello@futatrans.com" class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]" data-wow-delay=".2s">
+       <div class="flex items-center justify-center">
+        <div>
+            <span>
             Nous contacter
         </span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
 </svg>
+        </div>
+       </div>
+        
 
                                 </a>
 </div>

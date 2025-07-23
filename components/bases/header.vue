@@ -125,12 +125,18 @@
               >
                 <div class="header-button ms-4">
                   <a
-                    href="#"
+                    href="#download-app"
                     class="theme-btn flex justify-center items-center"
                   >
+
+                 <div class="flex items-center justify-center">
+                    <div>
                     <span> Télécharger </span>
 
-                    <span>
+                  </div>
+
+                    <div>
+                        <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -146,6 +152,8 @@
                         />
                       </svg>
                     </span>
+                    </div>
+                 </div>
                   </a>
                 </div>
                 <div class="header__hamburger d-block d-xl-none my-auto">
