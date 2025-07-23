@@ -11,10 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Amulya', 'sans-serif'],
-        'amulya': ['Amulya', 'sans-serif'],
-        'synonym': ['Synonym', 'sans-serif'],
-        'heading': ['Synonym', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif']
       },
       fontWeight: {
         'light': '300',

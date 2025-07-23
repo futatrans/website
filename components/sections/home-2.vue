@@ -72,8 +72,11 @@
                       class="section-desc wow fadeInUp max-w-[550px]"
                       data-wow-delay=".6s"
                     >
-                      FUTA TRANS, c’est la liberté de se déplacer sans dépendre
-                      de la monnaie physique grâce à notre application mobile :
+                      <span class="sm:text-lg text-gray-700">
+                        FUTA TRANS, c’est la liberté de se déplacer sans
+                        dépendre de la monnaie physique grâce à notre
+                        application mobile :
+                      </span>
                     </p>
                   </div>
                   <ul
@@ -93,7 +96,7 @@
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
                       />
-                      Vous suivez vos dépenses transport dans un historique
+                      Vous suivez vos dépenses de transport dans un historique
                       clair et simple
                     </li>
                     <li class="flex justify-start items-center">
@@ -120,40 +123,31 @@
                       Vous bénéficiez d'un service rapide, fluide et moderne
                     </li>
                   </ul>
-                  <a
-                    class="theme-btn wow fadeInUp flex justify-center items-center max-w-[300px]"
-                    data-wow-delay=".2s"
-                    href="#download-app"
-                  >
-                    <div class="flex items-center justify-center">
-                      <div>
-                        <span> Télécharger l'app </span>
-                      </div>
-                      <div>
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                          >
-                            <g clip-path="url(#clip0_18_41)">
-                              <path
-                                d="M11.6118 3.61182L10.8991 4.32454L14.0706 7.49603H0V8.50398H14.0706L10.8991 11.6754L11.6118 12.3882L16 7.99997L11.6118 3.61182Z"
-                                fill="white"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_18_41">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </a>
+
+                  <div class="mt-10">
+                    <a href="#usagers" class="flex justify-start items-center gap-2">
+                      <span class="text-black border-b-4 border-[#01B180]"
+                        >En savoir plus</span
+                      >
+
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

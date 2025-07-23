@@ -24,15 +24,7 @@
                 <div class="col-xl-7 order-1 order-xl-1 pt-24 sm:pt-0">
                   <div class="intro-content">
                     <div class="intro-section-title">
-                      <div class="intro-subtitle ">
-                        <div class="ml-2">
-                        Bienvenue
-                        </div>
-                        <img
-                          src="/vendors/images/icon/fireIcon.svg"
-                          alt="icon"
-                        />
-                      </div>
+                      
                       <h1
                         class="intro-title wow fadeInUp"
                         data-wow-delay=".2s"
@@ -48,8 +40,7 @@
                       <p class="intro-desc wow fadeInUp" data-wow-delay=".4s">
                         FUTA TRANS est une application de paiement mobile conçue
                         pour les conducteurs de motos-taxis, taxis et leurs
-                        clients.​ Fini le cash, bonjour la sécurité, la
-                        traçabilité.
+                        clients.​ 
                       </p>
                     </div>
                     <div
@@ -57,7 +48,7 @@
                       data-wow-delay=".6s"
                     >
                       <a
-                        class="theme-btn flex justify-center items-center"
+                        class="theme-btn flex justify-center items-center w-full sm:w-auto"
                         href="#download-app"
                       >
                         <div class="flex items-center justify-center">
@@ -82,7 +73,7 @@
                         </div>
                       </a>
                       <a
-                        class="theme-btn style2 wow fadeInUp flex justify-center items-center"
+                        class="theme-btn style2 wow fadeInUp flex justify-center items-center w-full sm:w-auto"
                         data-wow-delay=".2s"
                         href="#usagers"
                       >
@@ -119,6 +110,7 @@
                           <img
                             src="/vendors/images/intro/introProfileThumb1_1.png"
                             alt="thumb"
+                            class="w-[100px]"
                           />
                         </div>
                         <div class="item">
@@ -183,28 +175,24 @@
 @media (max-width: 1200px) {
   .futa-mockup-responsive {
     width: 600px !important;
-    max-width: 90% !important;
   }
 }
 
 @media (max-width: 992px) {
   .futa-mockup-responsive {
     width: 500px !important;
-    max-width: 85% !important;
   }
 }
 
 @media (max-width: 768px) {
   .futa-mockup-responsive {
     width: 400px !important;
-    max-width: 80% !important;
   }
 }
 
 @media (max-width: 576px) {
   .futa-mockup-responsive {
     width: 350px !important;
-    max-width: 75% !important;
   }
 }
 

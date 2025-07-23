@@ -125,7 +125,7 @@
                 data-wow-delay=".2s"
                 style="text-transform: none !important"
               >
-                <span class="text-5xl"> Nos partenaires </span>
+                <span class="text-5xl">Partenaires ?</span>
               </h2>
               <div class="max-w-[500px] mx-auto">
                 <p class="mt-4 text-lg">

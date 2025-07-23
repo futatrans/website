@@ -5473,7 +5473,7 @@ input.main-search-input::placeholder {
   z-index: 5;
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .widget-head h3 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #242331;
   font-size: 30px;
   font-style: normal;
@@ -5486,7 +5486,7 @@ input.main-search-input::placeholder {
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .footer-content p {
   color: #565656;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -5510,7 +5510,7 @@ input.main-search-input::placeholder {
   border-radius: 39px;
   background: var(--title);
   color: var(--white);
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -5527,7 +5527,7 @@ input.main-search-input::placeholder {
   padding: 18px 25px;
   border-radius: 39px;
   border: 1px solid #D3D3D3;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #242331;
   font-size: 16px;
   font-style: normal;
@@ -5547,7 +5547,7 @@ input.main-search-input::placeholder {
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .list-area li a {
   color: #565656;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -5564,7 +5564,7 @@ input.main-search-input::placeholder {
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .contact-box .subtitle {
   color: #01B180;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -5573,7 +5573,7 @@ input.main-search-input::placeholder {
   margin-bottom: 8px;
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .contact-box .widget-head {
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #242331;
   font-size: 30px;
   font-style: normal;
@@ -5584,7 +5584,7 @@ input.main-search-input::placeholder {
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .contact-box .text {
   color: #797979;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -5601,7 +5601,7 @@ input.main-search-input::placeholder {
 }
 .footer-widgets-wrapper.style1 .single-footer-widget .contact-box .info .link a {
   color: #565656;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -5683,7 +5683,7 @@ input.main-search-input::placeholder {
 }
 .footer-bottom.style1 .footer-wrapper p {
   color: #797979;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
