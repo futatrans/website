@@ -109,9 +109,14 @@ export default defineNuxtConfig({
         { name: 'business:contact_data:phone_number', content: '+243 817 039 144' },
         { name: 'business:contact_data:email', content: 'hello@futatrans.com' },
         
-        // Sécurité
+        // Sécurité - En-têtes de sécurité renforcés
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://api.fontshare.com https://cdn.fontshare.com https://fonts.gstatic.com;" },
+        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://api.fontshare.com https://cdn.fontshare.com https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';" },
+        { 'http-equiv': 'Strict-Transport-Security', content: 'max-age=31536000; includeSubDomains; preload' },
+        { 'http-equiv': 'X-Frame-Options', content: 'DENY' },
+        { 'http-equiv': 'X-Content-Type-Options', content: 'nosniff' },
+        { 'http-equiv': 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+        { 'http-equiv': 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()' },
         
         // Performance
         { name: 'mobile-web-app-capable', content: 'yes' },
