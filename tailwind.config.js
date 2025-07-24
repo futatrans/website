@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif']
+        'inter': ['Inter', 'sans-serif'],
+        'amulya': ['Amulya', 'sans-serif']
       },
       fontWeight: {
         'light': '300',

@@ -1,3 +1,27 @@
+/* Application de la police Amulya aux titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amulya', sans-serif;
+}
+
+/* Classes utilitaires pour Amulya */
+.font-amulya {
+  font-family: 'Amulya', sans-serif;
+}
+
+/* Titres spécifiques avec Amulya */
+.intro-title,
+.section-title,
+.single-section-title {
+  font-family: 'Amulya', sans-serif;
+}
+
+/* Responsive pour les titres */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amulya', sans-serif;
+  }
+}
+
 /* Styles pour optimiser le slider des logos partenaires */
 .brand-logo {
   position: relative !important;
@@ -99,60 +123,53 @@
 
 /* Styles pour l'image responsive du mockup */
 .main-thumb {
-  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
 
-/* Responsive pour l'image mockup */
 @media (max-width: 768px) {
   .main-thumb {
-    max-width: 500px !important;
-    width: 90% !important;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 576px) {
   .main-thumb {
-    max-width: 400px !important;
-    width: 85% !important;
+    max-width: 85%;
   }
 }
 
 @media (max-width: 480px) {
   .main-thumb {
-    max-width: 350px !important;
-    width: 80% !important;
+    max-width: 80%;
   }
 }
 
 @media (max-width: 375px) {
   .main-thumb {
-    max-width: 300px !important;
-    width: 75% !important;
+    max-width: 75%;
   }
 }
 
-/* Optimisation pour les écrans très larges */
 @media (min-width: 1200px) {
   .main-thumb {
-    max-width: 700px !important;
-    width: 100% !important;
+    max-width: 100%;
   }
 }
 
-/* Animation d'apparition pour l'image */
 .main-thumb {
-  animation: fadeInScale 0.6s ease-out;
+  transition: transform 0.3s ease;
 }
 
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.95) translateY(20px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale(1);
   }
 } 
