@@ -1698,12 +1698,12 @@ input[type=radio]:checked ~ label::before {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px var(--orange);
+  box-shadow: inset 0 0 5px #0A3A3C;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--orange);
+  background: #0A3A3C;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -4460,11 +4460,7 @@ input.main-search-input::placeholder {
   line-height: normal;
   transition: all 0.4s ease-in-out;
 }
-@media (max-width: 1399px) {
-  .header-main .main-menu ul li a {
-    letter-spacing: 1px;
-  }
-}
+
 .header-main .main-menu ul li a i {
   margin-left: 7px;
 }

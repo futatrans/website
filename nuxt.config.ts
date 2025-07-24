@@ -147,6 +147,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: '/vendors/css/all.min.css' },
         { rel: 'stylesheet', href: '/vendors/css/main.css' },
         
+
+        
         // Préconnexions pour les performances
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -157,9 +159,35 @@ export default defineNuxtConfig({
       ],
       
       script: [
-        // Scripts critiques - chargement avant le rendu
-        { src: '/vendors/js/jquery-3.7.1.min.js', defer: true },
-        { src: '/vendors/js/bootstrap.bundle.min.js', defer: true },
+        // Scripts critiques - chargement immédiat pour éviter le FOUC
+        { src: '/vendors/js/jquery-3.7.1.min.js' },
+        { src: '/vendors/js/bootstrap.bundle.min.js' },
+        
+        // Script inline pour masquer le menu mobile immédiatement
+        {
+          innerHTML: `
+            // Masquer le menu mobile dès le chargement
+            document.addEventListener('DOMContentLoaded', function() {
+              const offcanvas = document.querySelector('.offcanvas__info');
+              const overlay = document.querySelector('.offcanvas__overlay');
+              if (offcanvas) offcanvas.classList.remove('info-open');
+              if (overlay) overlay.classList.remove('overlay-open');
+            });
+            
+            // Masquer aussi pendant le chargement
+            if (document.readyState === 'loading') {
+              document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'interactive') {
+                  const offcanvas = document.querySelector('.offcanvas__info');
+                  const overlay = document.querySelector('.offcanvas__overlay');
+                  if (offcanvas) offcanvas.classList.remove('info-open');
+                  if (overlay) overlay.classList.remove('overlay-open');
+                }
+              });
+            }
+          `,
+          type: 'text/javascript'
+        },
         
         // Google Analytics (exemple)
         {

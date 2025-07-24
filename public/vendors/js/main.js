@@ -342,15 +342,15 @@ JS TABLE OF CONTENTS
                 }),
                     $("body").on("mouseenter", "a, .cursor-pointer", function () {
                         if (e && t) {
-                            e.classList.add("cursor-hover");
-                            t.classList.add("cursor-hover");
+                        e.classList.add("cursor-hover");
+                        t.classList.add("cursor-hover");
                         }
                     }),
                     $("body").on("mouseleave", "a, .cursor-pointer", function () {
                         if (e && t) {
-                            ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
-                                (e.classList.remove("cursor-hover"),
-                                    t.classList.remove("cursor-hover"));
+                        ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
+                            (e.classList.remove("cursor-hover"),
+                                t.classList.remove("cursor-hover"));
                         }
                     }),
                     (e.style.visibility = "visible"),
