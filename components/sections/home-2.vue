@@ -66,13 +66,15 @@
                       data-wow-delay=".4s"
                       style="text-transform: none !important"
                     >
-                      Pour les usagers
+                      <span class="text-3xl sm:text-5xl">
+                        Pour les usagers
+                      </span>
                     </h2>
                     <p
                       class="section-desc wow fadeInUp max-w-[550px]"
                       data-wow-delay=".6s"
                     >
-                      <span class="sm:text-lg text-gray-700">
+                      <span class="text-lg text-gray-800">
                         FUTA TRANS, c’est la liberté de se déplacer sans
                         dépendre de la monnaie physique grâce à notre
                         application mobile :
@@ -87,6 +89,8 @@
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
+                        width="25"
+
                       />
                       Vous payez votre trajet en un clic, via QR Code ou
                       identifiant conducteur
@@ -95,6 +99,8 @@
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
+                        width="25"
+
                       />
                       Vous suivez vos dépenses de transport dans un historique
                       clair et simple
@@ -103,6 +109,8 @@
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
+                        width="25"
+
                       />
                       Vous rechargez votre portefeuille mobile via Mobile Money
                       ou carte bancaire
@@ -111,6 +119,8 @@
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
+                        width="25"
+
                       />
                       Vous roulez plus sereinement, sans vous soucier du rendu
                       de monnaie ou des pertes d'argent
@@ -119,6 +129,8 @@
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
+                        width="25"
+
                       />
                       Vous bénéficiez d'un service rapide, fluide et moderne
                     </li>

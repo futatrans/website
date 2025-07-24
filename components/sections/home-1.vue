@@ -21,13 +21,14 @@
             </div>
             <div class="container">
               <div class="row">
-                <div class="col-xl-7 order-1 order-xl-1 pt-24 sm:pt-0">
-                  <div class="intro-content">
+                <div class="col-xl-7 order-1 order-xl-1 pt-20 lg:pt-0 -mb-[200px]">
+                  <div class=" sm:-mb-24 intro-content intro-content-responsive flex flex-col justify-center items-center sm:items-start">
                     <div class="intro-section-title">
                       
                       <h1
-                        class="intro-title wow fadeInUp"
+                        class="intro-title wow fadeInUp "
                         data-wow-delay=".2s"
+
                         style="
                           text-transform: none !important;
                           font-weight: 900 !important;
@@ -37,11 +38,13 @@
                           Transport payé en un clic, en toute sécurité
                         </span>
                       </h1>
-                      <p class="intro-desc wow fadeInUp" data-wow-delay=".4s">
+                      <div class="max-w-[650px]">
+                        <p class="intro-desc wow fadeInUp" data-wow-delay=".4s">
                         FUTA TRANS est une application de paiement mobile conçue
                         pour les conducteurs de motos-taxis, taxis et leurs
                         clients.​ 
                       </p>
+                      </div>
                     </div>
                     <div
                       class="btn-wrapper style1 wow fadeInUp"
@@ -113,7 +116,7 @@
                             class="w-[100px]"
                           />
                         </div>
-                        <div class="item">
+                        <div class="item text-left">
                           <h6 style="text-transform: none !important;">Une communauté</h6>
                           <p>En une app</p>
                         </div>
@@ -122,7 +125,7 @@
                   </div>
                 </div>
                 <div class="col-xl-5 order-2 order-xl-2">
-                  <div class="intro-thumb -mt-[200px] -ml-24 lg:mt-0">
+                  <div class="intro-thumb -ml-24 sm:mt-0 ">
                     <div class="thumbShape1">
                       <img
                         src="/vendors/images/shape/introThumbShape1_1.png"
@@ -172,9 +175,9 @@
 }
 
 /* Responsive forcé avec !important */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .futa-mockup-responsive {
-    width: 600px !important;
+    width: 550px !important;
   }
 }
 
@@ -207,6 +210,18 @@
   .futa-mockup-responsive {
     width: 250px !important;
     max-width: 65% !important;
+  }
+}
+
+/* Classe responsive pour l'alignement du contenu */
+.intro-content-responsive {
+  text-align: center !important;
+}
+
+/* Responsive pour les écrans moyens et plus grands */
+@media (min-width: 640px) {
+  .intro-content-responsive {
+    text-align: left !important;
   }
 }
 

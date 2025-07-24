@@ -38,7 +38,7 @@
                 <div class="footer-content">
                   <p>
                     FUTA TRANS révolutionne le transport en Afrique avec une solution de paiement mobile sécurisée pour les conducteurs et les passagers.
-                  </p>
+                  </p> 
                   <div
                       class="flex justify-center sm:justify-start space-y-4 sm:space-y-0 mt-8 sm:flex-row flex-col"
                     >

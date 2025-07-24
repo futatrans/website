@@ -24,10 +24,12 @@
                         />
                       </div>
                       <h2 class="title" style="text-transform: none !important">
-                        Pour les conducteurs
+                        <span class="text-3xl sm:text-5xl">
+                          Pour les conducteurs
+                        </span>
                       </h2>
                       <p class="section-desc">
-                        <span class="sm:text-lg text-gray-700">
+                        <span class="text-lg text-gray-800">
                           FUTA TRANS, c’est plus qu’un moyen d’encaisser : c’est
                           un outil pour professionnaliser votre métier.
                         </span>
@@ -45,6 +47,7 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
                           />
                           Encaissez en toute sécurité via QR Code ou identifiant
                           unique
@@ -53,6 +56,8 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
+
                           />
                           Suivez vos revenus journaliers, hebdomadaires et
                           mensuels
@@ -61,6 +66,8 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
+
                           />
                           Prouvez votre activité grâce à des relevés clairs pour
                           accéder à des services financiers
@@ -69,6 +76,8 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
+
                           />
                           Retirez facilement votre argent via Mobile Money /
                           banque sans frais
@@ -77,6 +86,8 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
+
                           />
                           Réduisez les risques de vols ou de pertes liés au cash
                         </li>
@@ -84,6 +95,8 @@
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
+                            width="25"
+
                           />
                           Accédez à des programmes exclusifs : leasing de motos
                           électriques, microcrédit, formations digitales

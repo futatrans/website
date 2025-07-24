@@ -46,7 +46,9 @@
                       text-transform: none !important;
                     "
                   >
-                    Pour la planète
+                    <span class="text-3xl sm:text-5xl">
+                      Pour la planète
+                    </span>
                   </h2>
                   <p
                     class="wow fadeInUp"
@@ -57,7 +59,7 @@
                       animation-name: fadeInUp;
                     "
                   >
-                   <span class="sm:text-lg text-gray-700">
+                   <span class="text-lg text-gray-800">
                     FUTA TRANS ne se limite pas au paiement : elle prépare l’avenir avec une stratégie verte innovante :
                    </span>
                   </p>
@@ -72,19 +74,19 @@
                         data-wow-delay=".2s"
                       >
                         <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" />
+                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
                           🎁 100 motos électriques offertes aux conducteurs les plus actifs
                         </li>
                         <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" />
+                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
                           Nous accompagnons les conducteurs dans l'adoption de motos électriques et facilitons l'accès au leasing vert ou au microcrédit pour en acquérir
                         </li>
                         <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" />
+                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
                           Nous déployons un réseau de stations de batteries interchangeables (swap)
                         </li>
                         <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" />
+                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
                           Nous réduisons le bruit, la pollution et contribuons à une mobilité durable et inclusive
                         </li>
                       </ul>

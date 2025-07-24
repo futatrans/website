@@ -55,7 +55,9 @@
                           text-transform: none !important;
                         "
                       >
-                        Ce n'est pas une app, c'est une révolution.
+                        <span class="text-3xl sm:text-5xl">
+                          Ce n'est pas une app, c'est une révolution.
+                        </span>
                       </h2>
                       <p
                         class="section-desc text-white mxw-651 wow fadeInUp"

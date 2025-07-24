@@ -3108,8 +3108,7 @@ input[type=radio]:checked ~ label::before {
 
 .checklist.style1 li {
   color: var(--title);
-  
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
