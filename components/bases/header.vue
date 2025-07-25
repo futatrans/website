@@ -56,9 +56,66 @@
               </div>
             </li>
           </ul>
+          <!-- Bouton de traduction mobile -->
+          <div class="language-switcher-mobile mt-4 mb-3">
+            <button
+              @click="toggleLanguage"
+              class="language-btn-mobile w-full flex items-center justify-center px-4 py-3 rounded-md border border-white/20 hover:border-green-600 transition-colors duration-200"
+            >
+              <!-- Drapeau français -->
+              <svg
+                v-if="locale === 'fr'"
+                class="flag-icon-mobile mr-3"
+                width="24"
+                height="18"
+                viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="0" y="0" width="6.67" height="15" fill="#002395"/>
+                <rect x="6.67" y="0" width="6.67" height="15" fill="#fff"/>
+                <rect x="13.33" y="0" width="6.67" height="15" fill="#ED2939"/>
+              </svg>
+              
+              <!-- Drapeau américain -->
+              <svg
+                v-else
+                class="flag-icon-mobile mr-3"
+                width="24"
+                height="18"
+                viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="20" height="15" fill="#B22234"/>
+                <rect y="1.15" width="20" height="1.15" fill="#fff"/>
+                <rect y="3.45" width="20" height="1.15" fill="#fff"/>
+                <rect y="5.75" width="20" height="1.15" fill="#fff"/>
+                <rect y="8.05" width="20" height="1.15" fill="#fff"/>
+                <rect y="10.35" width="20" height="1.15" fill="#fff"/>
+                <rect y="12.65" width="20" height="1.15" fill="#fff"/>
+                <rect width="8" height="8.05" fill="#3C3B6E"/>
+              </svg>
+              
+              <span class="text-white font-medium">{{ locale === 'fr' ? 'Français' : 'English' }}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 ml-2 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+          </div>
+          
           <div class="header-button mt-4">
             <a href="#" class="theme-btn text-center" @click="handleMenuClick">
-              <span>Télécharger l'app<i class="fa-solid fa-arrow-right-long"></i></span>
+              <span>{{ t('header.download') }}<i class="fa-solid fa-arrow-right-long"></i></span>
             </a>
           </div>
           <div class="social-icon d-flex align-items-center">
@@ -109,6 +166,51 @@
 
               <!-- Boutons et Menu Mobile -->
               <div class="header-right d-flex justify-content-end align-items-center">
+                <!-- Bouton de traduction -->
+                <div class="language-switcher me-3 block">
+                  <button
+                    @click="toggleLanguage"
+                    class="language-btn flex items-center justify-center px-3 py-2 rounded-md border border-gray-300 hover:border-green-600 transition-colors duration-200"
+                    :title="t('header.language')"
+                  >
+                    <!-- Drapeau français -->
+                    <svg
+                      v-if="locale === 'fr'"
+                      class="flag-icon mr-2"
+                      width="20"
+                      height="15"
+                      viewBox="0 0 20 15"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect x="0" y="0" width="6.67" height="15" fill="#002395"/>
+                      <rect x="6.67" y="0" width="6.67" height="15" fill="#fff"/>
+                      <rect x="13.33" y="0" width="6.67" height="15" fill="#ED2939"/>
+                    </svg>
+                    
+                    <!-- Drapeau américain -->
+                    <svg
+                      v-else
+                      class="flag-icon mr-2"
+                      width="20"
+                      height="15"
+                      viewBox="0 0 20 15"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="20" height="15" fill="#B22234"/>
+                      <rect y="1.15" width="20" height="1.15" fill="#fff"/>
+                      <rect y="3.45" width="20" height="1.15" fill="#fff"/>
+                      <rect y="5.75" width="20" height="1.15" fill="#fff"/>
+                      <rect y="8.05" width="20" height="1.15" fill="#fff"/>
+                      <rect y="10.35" width="20" height="1.15" fill="#fff"/>
+                      <rect y="12.65" width="20" height="1.15" fill="#fff"/>
+                      <rect width="8" height="8.05" fill="#3C3B6E"/>
+                    </svg>
+                    
+                    <span class="text-sm font-medium">{{ locale === 'fr' ? 'FR' : 'EN' }}</span>
+                    
+                  </button>
+                </div>
+
                 <!-- Bouton Contact -->
                 <div class="header-button ms-4 hidden sm:block">
                   <a
@@ -118,7 +220,7 @@
                   >
                     <div class="flex items-center justify-center">
                       <div>
-                        <span>Nous contacter</span>
+                        <span>{{ t('header.contact') }}</span>
                       </div>
                       <div>
                         <span>
@@ -163,20 +265,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import {
   Bars3Icon,
 } from '@heroicons/vue/24/outline'
+
+// Import du composable i18n
+const { t, locale, setLocale } = useI18n()
 
 // État du menu mobile
 const mobileMenuOpen = ref(false)
 
 // Navigation items
-const navigation = [
-  { name: 'Pour les usagers', href: '#usagers' },
-  { name: 'Pour les conducteurs', href: '#conducteurs' },
-  { name: 'Pour la planète', href: '#planete' },
-]
+const navigation = computed(() => [
+  { name: t('header.navigation.usagers'), href: '#usagers' },
+  { name: t('header.navigation.conducteurs'), href: '#conducteurs' },
+  { name: t('header.navigation.planete'), href: '#planete' },
+])
 
 // Fonction pour fermer le menu mobile
 const closeMobileMenu = () => {
@@ -239,6 +344,12 @@ const handleLinkClick = (event) => {
     event.preventDefault()
   }
 }
+
+// Fonction pour basculer la langue
+const toggleLanguage = () => {
+  const newLocale = locale.value === 'fr' ? 'en' : 'fr'
+  setLocale(newLocale)
+}
 </script>
 
 <style scoped>
@@ -260,7 +371,7 @@ const handleLinkClick = (event) => {
 }
 
 .header-right {
-  @apply flex items-center space-x-4;
+  @apply flex items-center;
 }
 
 /* Menu Mobile avec Style Original */
@@ -421,6 +532,47 @@ const handleLinkClick = (event) => {
   to {
     transform: translateX(0);
   }
+}
+
+/* Styles pour le bouton de traduction */
+.language-btn {
+  background: white;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+  background: #f3f4f6;
+  color: #10B981;
+}
+
+.language-btn-mobile {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.language-btn-mobile:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10B981;
+}
+
+/* Styles pour les icônes de drapeaux */
+.flag-icon {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.flag-icon-mobile {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.language-btn:hover .flag-icon,
+.language-btn-mobile:hover .flag-icon-mobile {
+  transform: scale(1.05);
 }
 
 /* Responsive */

@@ -37,8 +37,7 @@
                         "
                       >
                         <span class="flex items-center justify-start">
-                          Pourquoi
-                          <span class="hidden sm:block ml-2">FUTA TRANS ?</span>
+                          {{ t('homeCta.subtitle') }}
                         </span>
                         <img
                           src="/vendors/images/icon/fireIcon.svg"
@@ -55,8 +54,8 @@
                           text-transform: none !important;
                         "
                       >
-                        <span class="text-3xl sm:text-5xl">
-                          Ce n'est pas une app, c'est une révolution.
+                        <span class="text-3xl sm:text-5xl" style="text-transform: none !important; line-height: 1.2;">
+                          {{ t('homeCta.title') }}
                         </span>
                       </h2>
                       <p
@@ -68,10 +67,7 @@
                           animation-name: fadeInUp;
                         "
                       >
-                        FUTA TRANS, c'est un outil technologique, un levier
-                        social, un accélérateur écologique et un allié
-                        économique pour toute une génération de conducteurs et
-                        de citoyens.
+                        {{ t('homeCta.description') }}
                       </p>
                     </div>
                     <div
@@ -127,12 +123,11 @@
                 data-wow-delay=".2s"
                 style="text-transform: none !important"
               >
-                <span class="text-5xl">Partenaires ?</span>
+                <span class="text-3xl sm:text-5xl">{{ t('homeCta.partners.title') }}</span>
               </h2>
               <div class="max-w-[500px] mx-auto">
                 <p class="mt-4 text-lg">
-                  Rejoignez le mouvement et faites partie de la révolution du
-                  transport en Afrique.
+                  {{ t('homeCta.partners.description') }}
                 </p>
                 <div class="flex justify-center items-center mt-8">
                   <a
@@ -142,7 +137,7 @@
                   >
                     <div class="flex items-center justify-center">
                       <div>
-                        <span> Nous contacter </span>
+                        <span> {{ t('homeCta.partners.contactButton') }} </span>
                       </div>
                       <div>
                         <svg
@@ -165,80 +160,6 @@
                 </div>
               </div>
             </div>
-            <!--
-            <div class="row">
-              <div class="slider-area brandSliderOne">
-                <div
-                  class="swiper gt-slider"
-                  id="brandSliderOne"
-                  ref="brandSlider"
-                >
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_1.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_2.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_3.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_4.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_5.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="brand-logo" style="width: 120px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img
-                          src="/vendors/images/logo/brandLogo1_3.png"
-                          alt="logo"
-                          style="max-width: 100%; max-height: 100%; object-fit: contain;"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </div>
@@ -248,6 +169,9 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
+
+// Import du composable i18n
+const { t } = useI18n()
 
 const brandSlider = ref(null);
 

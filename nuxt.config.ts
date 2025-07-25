@@ -19,6 +19,12 @@ export default defineNuxtConfig({
     '@nuxt/eslint'
   ],
 
+  // Configuration des plugins
+  plugins: [
+    '~/plugins/i18n.server.ts',
+    '~/plugins/i18n.client.ts'
+  ],
+
   // Configuration pour éviter les warnings Vue Router sur les assets
   router: {
     options: {

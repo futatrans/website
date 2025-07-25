@@ -35,14 +35,12 @@
                         "
                       >
                         <span class="font-extrabold">
-                          Transport payé en un clic, en toute sécurité
+                          {{ t('home1.title') }}
                         </span>
                       </h1>
                       <div class="max-w-[650px]">
                         <p class="intro-desc wow fadeInUp" data-wow-delay=".4s">
-                        FUTA TRANS est une application de paiement mobile conçue
-                        pour les conducteurs de motos-taxis, taxis et leurs
-                        clients.​ 
+                        {{ t('home1.description') }}
                       </p>
                       </div>
                     </div>
@@ -55,7 +53,7 @@
                         href="#download-app"
                       >
                         <div class="flex items-center justify-center">
-                            <span> Télécharger </span>
+                            <span> {{ t('home1.downloadButton') }} </span>
 
                         <span>
                           <svg
@@ -82,7 +80,7 @@
                       >
                         <div class="flex items-center justify-center">
                             <div>
-                            <span> En savoir plus </span>
+                            <span> {{ t('home1.learnMoreButton') }} </span>
 
                             </div>
                         <div>
@@ -117,8 +115,8 @@
                           />
                         </div>
                         <div class="item text-left">
-                          <h6 style="text-transform: none !important;">Une communauté</h6>
-                          <p>En une app</p>
+                          <h6 style="text-transform: none !important;">{{ t('home1.community.title') }}</h6>
+                          <p>{{ t('home1.community.subtitle') }}</p>
                         </div>
                       </div>
                     </div>
@@ -157,7 +155,10 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Import du composable i18n
+const { t } = useI18n()
+</script>
 
 <style scoped>
 /* Classe spécifique pour l'image responsive FUTA TRANS */

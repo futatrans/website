@@ -17,7 +17,7 @@
                       data-wow-delay=".2s"
                     >
                       <div class="subtitle">
-                        Fonctionnalités
+                        {{ t('home4.subtitle') }}
                         <img
                           src="/vendors/images/icon/fireIcon.svg"
                           alt="icon"
@@ -25,13 +25,12 @@
                       </div>
                       <h2 class="title" style="text-transform: none !important">
                         <span class="text-3xl sm:text-5xl">
-                          Pour les conducteurs
+                          {{ t('home4.title') }}
                         </span>
                       </h2>
                       <p class="section-desc">
                         <span class="text-lg text-gray-800">
-                          FUTA TRANS, c’est plus qu’un moyen d’encaisser : c’est
-                          un outil pour professionnaliser votre métier.
+                          {{ t('home4.description') }}
                         </span>
                       </p>
                     </div>
@@ -43,70 +42,24 @@
                         class="checklist style1 wow fadeInUp max-w-[500px]"
                         data-wow-delay=".2s"
                       >
-                        <li class="flex justify-start items-center">
+                        <li 
+                          v-for="(feature, index) in t('home4.features')" 
+                          :key="index"
+                          class="flex justify-start items-center"
+                        >
                           <img
                             src="/vendors/images/icon/checkmarkIcon.svg"
                             alt="icon"
                             width="25"
                           />
-                          Encaissez en toute sécurité via QR Code ou identifiant
-                          unique
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img
-                            src="/vendors/images/icon/checkmarkIcon.svg"
-                            alt="icon"
-                            width="25"
-
-                          />
-                          Suivez vos revenus journaliers, hebdomadaires et
-                          mensuels
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img
-                            src="/vendors/images/icon/checkmarkIcon.svg"
-                            alt="icon"
-                            width="25"
-
-                          />
-                          Prouvez votre activité grâce à des relevés clairs pour
-                          accéder à des services financiers
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img
-                            src="/vendors/images/icon/checkmarkIcon.svg"
-                            alt="icon"
-                            width="25"
-
-                          />
-                          Retirez facilement votre argent via Mobile Money /
-                          banque sans frais
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img
-                            src="/vendors/images/icon/checkmarkIcon.svg"
-                            alt="icon"
-                            width="25"
-
-                          />
-                          Réduisez les risques de vols ou de pertes liés au cash
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img
-                            src="/vendors/images/icon/checkmarkIcon.svg"
-                            alt="icon"
-                            width="25"
-
-                          />
-                          Accédez à des programmes exclusifs : leasing de motos
-                          électriques, microcrédit, formations digitales
+                          {{ feature }}
                         </li>
                       </ul>
                     </div>
                     <div>
                       <a href="#conducteurs" class="flex justify-start items-center gap-2">
                         <span class="text-black border-b-4 border-[#01B180]"
-                          >En savoir plus</span
+                          >{{ t('home4.learnMore') }}</span
                         >
 
                         <span>
@@ -168,4 +121,7 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Import du composable i18n
+const { t } = useI18n()
+</script>

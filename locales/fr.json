@@ -1,0 +1,113 @@
+{
+  "header": {
+    "navigation": {
+      "usagers": "Pour les usagers",
+      "conducteurs": "Pour les conducteurs",
+      "planete": "Pour la planète"
+    },
+    "contact": "Nous contacter",
+    "download": "Télécharger l'app",
+    "language": "Langue"
+  },
+  "home1": {
+    "title": "Transport payé en un clic, en toute sécurité",
+    "description": "FUTA TRANS est une application de paiement mobile conçue pour les conducteurs de motos-taxis, taxis et leurs clients.​",
+    "downloadButton": "Télécharger",
+    "learnMoreButton": "En savoir plus",
+    "community": {
+      "title": "Une communauté",
+      "subtitle": "En une app"
+    }
+  },
+  "home2": {
+    "subtitle": "Fonctionnalités",
+    "title": "Pour les usagers",
+    "description": "FUTA TRANS, c'est la liberté de se déplacer sans dépendre de la monnaie physique grâce à notre application mobile :",
+    "features": [
+      "Vous payez votre trajet en un clic, via QR Code ou identifiant conducteur",
+      "Vous suivez vos dépenses de transport dans un historique clair et simple",
+      "Vous rechargez votre portefeuille mobile via Mobile Money ou carte bancaire",
+      "Vous roulez plus sereinement, sans vous soucier du rendu de monnaie ou des pertes d'argent",
+      "Vous bénéficiez d'un service rapide, fluide et moderne"
+    ],
+    "learnMore": "En savoir plus"
+  },
+  "home3": {
+    "subtitle": "Comment ça marche",
+    "title": "Votre téléphone devient votre caisse !",
+    "steps": [
+      {
+        "step": "ÉTAPE - 01",
+        "title": "Téléchargez l'app",
+        "description": "Installez FUTA TRANS depuis l'App Store ou Google Play Store"
+      },
+      {
+        "step": "ÉTAPE - 02",
+        "title": "Créez votre compte",
+        "description": "Inscrivez-vous en tant que conducteur ou passager en quelques clics"
+      },
+      {
+        "step": "ÉTAPE - 03",
+        "title": "Payez et roulez !",
+        "description": "Scannez le QR Code ou entrez l'identifiant pour payer en toute sécurité"
+      }
+    ]
+  },
+  "home4": {
+    "subtitle": "Fonctionnalités",
+    "title": "Pour les conducteurs",
+    "description": "FUTA TRANS, c'est plus qu'un moyen d'encaisser : c'est un outil pour professionnaliser votre métier.",
+    "features": [
+      "Encaissez en toute sécurité via QR Code ou identifiant unique",
+      "Suivez vos revenus journaliers, hebdomadaires et mensuels",
+      "Prouvez votre activité grâce à des relevés clairs pour accéder à des services financiers",
+      "Retirez facilement votre argent via Mobile Money / banque sans frais",
+      "Réduisez les risques de vols ou de pertes liés au cash",
+      "Accédez à des programmes exclusifs : leasing de motos électriques, microcrédit, formations digitales"
+    ],
+    "learnMore": "En savoir plus"
+  },
+  "home5": {
+    "subtitle": "Notre impact écologique",
+    "title": "Pour la planète",
+    "description": "FUTA TRANS ne se limite pas au paiement : elle prépare l'avenir avec une stratégie verte innovante :",
+    "features": [
+      "🎁 100 motos électriques offertes aux conducteurs les plus actifs",
+      "Nous accompagnons les conducteurs dans l'adoption de motos électriques et facilitons l'accès au leasing vert ou au microcrédit pour en acquérir",
+      "Nous déployons un réseau de stations de batteries interchangeables (swap)",
+      "Nous réduisons le bruit, la pollution et contribuons à une mobilité durable et inclusive"
+    ],
+    "learnMore": "En savoir plus"
+  },
+  "homeCta": {
+    "subtitle": "Pourquoi FUTA TRANS ?",
+    "title": "Ce n'est pas une app, c'est une révolution.",
+    "description": "FUTA TRANS, c'est un outil technologique, un levier social, un accélérateur écologique et un allié économique pour toute une génération de conducteurs et de citoyens.",
+    "partners": {
+      "title": "Partenaires ?",
+      "description": "Rejoignez le mouvement et faites partie de la révolution du transport en Afrique.",
+      "contactButton": "Nous contacter"
+    }
+  },
+  "footer": {
+    "description": "FUTA TRANS révolutionne le transport en Afrique avec une solution de paiement mobile sécurisée pour les conducteurs et les passagers.",
+    "navigation": {
+      "title": "Navigation",
+      "usagers": "Pour les usagers",
+      "conducteurs": "Pour les conducteurs",
+      "planete": "Pour la planète"
+    },
+    "usefulLinks": {
+      "title": "Liens utiles",
+      "about": "À propos",
+      "faq": "FAQ",
+      "legal": "Mentions légales",
+      "privacy": "Politique de confidentialité"
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "location": "📍 Kinshasa-Gombe"
+    },
+    "copyright": "Copyright © 2024 FUTA TRANS. Tous droits réservés."
+  }
+} 

@@ -1,0 +1,115 @@
+{
+  "header": {
+    "navigation": {
+      "usagers": "For users",
+      "conducteurs": "For drivers",
+      "planete": "For the planet"
+    },
+    "contact": "Contact us",
+    "download": "Download app",
+    "language": "Language"
+  },
+  "home1": {
+    "title": "Transport paid in one click, with total security",
+    "description": "FUTA TRANS is a mobile payment application designed for motorcycle-taxi drivers, taxi operators, and their passengers.​",
+    "downloadButton": "Download the App",
+    "learnMoreButton": "Learn more",
+    "community": {
+      "title": "A community",
+      "subtitle": "In one app"
+    }
+  },
+  "home2": {
+    "subtitle": "Features",
+    "title": "For passengers",
+    "description": "FUTA TRANS gives you the freedom to travel without relying on physical cash, all through your mobile phone:",
+    "features": [
+      "Pay for your ride in one click via QR Code or driver ID",
+      "Track your transport expenses in a clear and simple history",
+      "Recharge your wallet via Mobile Money or bank card",
+      "Ride with confidence — no more change issues or lost cash",
+      "Enjoy fast, smooth, and modern service",
+      "🎁 Loyalty bonus: Earn points or discounts based on your ride history."
+    ],
+    "learnMore": "Learn more"
+  },
+  "home3": {
+    "subtitle": "How it works",
+    "title": "Your phone becomes your cash register!",
+    "steps": [
+      {
+        "step": "STEP - 01",
+        "title": "Download the app",
+        "description": "Install FUTA TRANS from the App Store or Google Play Store"
+      },
+      {
+        "step": "STEP - 02",
+        "title": "Create your account",
+        "description": "Sign up as a driver or passenger in just a few clicks"
+      },
+      {
+        "step": "STEP - 03",
+        "title": "Pay and ride!",
+        "description": "Scan the QR Code or enter the ID to pay securely"
+      }
+    ]
+  },
+  "home4": {
+    "subtitle": "Features",
+    "title": "For drivers",
+    "description": "FUTA TRANS is more than just a payment method — it’s a tool to professionalize your business :",
+    "features": [
+      "Secure payments via QR Code or unique driver ID",
+      "Monitor your daily, weekly, and monthly income",
+      "Access clear financial records to apply for credit or insurance",
+      "Withdraw your money instantly via Mobile Money or bank – with no fees",
+      "Eliminate the risks of carrying cash",
+      "Access exclusive programs: electric motorcycle leasing, microloans, digital training",
+      "💼 Your phone becomes your cash register, your ledger, and your business partner"
+    ],
+    "learnMore": "Learn more"
+  },
+  "home5": {
+    "subtitle": "Our ecological impact",
+    "title": "For the planet",
+    "description": " FUTA TRANS is not just a payment app — it's a forward-thinking green mobility solution :",
+    "features": [
+      "🎁 100 electric motorcycles offered to the most active drivers",
+      "We support drivers in adopting electric motorcycles and facilitate access to green leasing or microcredit to acquire them",
+      "Rolling out a network of charging and battery swap stations",
+      "Reducing noise, pollution, and promoting sustainable urban mobility"
+    ],
+    "learnMore": "Learn more"
+  },
+  "homeCta": {
+    "subtitle": "Why FUTA TRANS?",
+    "title": "This is not just an app. It’s a movement",
+    "description": "FUTA TRANS is a technological tool, a social lever, an environmental accelerator, and an economic ally for an entire generation of drivers and citizens.",
+    "partners": {
+      "title": "Partners?",
+      "description": "Join the movement and be part of Africa’s transport revolution.",
+      "contactButton": "Contact us"
+    }
+  },
+  "footer": {
+    "description": "FUTA TRANS revolutionizes transport in Africa with a secure mobile payment solution for drivers and passengers.",
+    "navigation": {
+      "title": "Navigation",
+      "usagers": "For users",
+      "conducteurs": "For drivers",
+      "planete": "For the planet"
+    },
+    "usefulLinks": {
+      "title": "Useful links",
+      "about": "About",
+      "faq": "FAQ",
+      "legal": "Legal notice",
+      "privacy": "Privacy policy"
+    },
+    "contact": {
+      "title": "Contact us",
+      "location": "📍 Kinshasa-Gombe"
+    },
+    "copyright": "Copyright © 2024 FUTA TRANS. All rights reserved."
+  }
+} 

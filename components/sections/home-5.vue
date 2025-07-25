@@ -1,9 +1,6 @@
 <template>
   <div class="relative">
-
-    <div id="planete" class="-top-[100px] absolute">
-
-</div>
+    <div id="planete" class="-top-[100px] absolute"></div>
     <section class="what-we-do-section fix section-padding">
       <div class="container mxw-1450">
         <div class="what-we-wrapper" ">
@@ -33,7 +30,7 @@
                       animation-name: fadeInUp;
                     "
                   >
-                    Notre impact écologique
+                    {{ t('home5.subtitle') }}
                     <img src="/vendors/images/icon/fireIcon.svg" alt="icon" />
                   </div>
                   <h2
@@ -47,7 +44,7 @@
                     "
                   >
                     <span class="text-3xl sm:text-5xl">
-                      Pour la planète
+                      {{ t('home5.title') }}
                     </span>
                   </h2>
                   <p
@@ -60,7 +57,7 @@
                     "
                   >
                    <span class="text-lg text-gray-800">
-                    FUTA TRANS ne se limite pas au paiement : elle prépare l’avenir avec une stratégie verte innovante :
+                    {{ t('home5.description') }}
                    </span>
                   </p>
                 </div>
@@ -73,21 +70,13 @@
                         class="checklist style1 wow fadeInUp max-w-[500px]"
                         data-wow-delay=".2s"
                       >
-                        <li class="flex justify-start items-center">
+                        <li 
+                          v-for="(feature, index) in t('home5.features')" 
+                          :key="index"
+                          class="flex justify-start items-center"
+                        >
                           <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
-                          🎁 100 motos électriques offertes aux conducteurs les plus actifs
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
-                          Nous accompagnons les conducteurs dans l'adoption de motos électriques et facilitons l'accès au leasing vert ou au microcrédit pour en acquérir
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
-                          Nous déployons un réseau de stations de batteries interchangeables (swap)
-                        </li>
-                        <li class="flex justify-start items-center">
-                          <img src="/vendors/images/icon/checkmarkIcon.svg" alt="icon" width="25" />
-                          Nous réduisons le bruit, la pollution et contribuons à une mobilité durable et inclusive
+                          {{ feature }}
                         </li>
                       </ul>
 
@@ -97,7 +86,7 @@
                     <div class="mt-6">
                       <a href="#planete" class="flex justify-start items-center gap-2">
                         <span class="text-black border-b-4 border-[#01B180]"
-                          >En savoir plus</span
+                          >{{ t('home5.learnMore') }}</span
                         >
 
                         <span>
@@ -124,7 +113,10 @@
         </div>
       </div>
     </section>
-
-     
   </div>
 </template>
+
+<script setup>
+// Import du composable i18n
+const { t } = useI18n()
+</script>

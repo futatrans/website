@@ -58,7 +58,7 @@
                       data-wow-delay=".2s"
                       style="text-transform: none !important"
                     >
-                      Fonctionnalités
+                      {{ t('home2.subtitle') }}
                       <img src="/vendors/images/icon/fireIcon.svg" alt="icon" />
                     </div>
                     <h2
@@ -67,7 +67,7 @@
                       style="text-transform: none !important"
                     >
                       <span class="text-3xl sm:text-5xl">
-                        Pour les usagers
+                        {{ t('home2.title') }}
                       </span>
                     </h2>
                     <p
@@ -75,9 +75,7 @@
                       data-wow-delay=".6s"
                     >
                       <span class="text-lg text-gray-800">
-                        FUTA TRANS, c’est la liberté de se déplacer sans
-                        dépendre de la monnaie physique grâce à notre
-                        application mobile :
+                        {{ t('home2.description') }}
                       </span>
                     </p>
                   </div>
@@ -85,61 +83,24 @@
                     class="checklist style1 wow fadeInUp max-w-[500px]"
                     data-wow-delay=".2s"
                   >
-                    <li class="flex justify-start items-center">
+                    <li 
+                      v-for="(feature, index) in t('home2.features')" 
+                      :key="index"
+                      class="flex justify-start items-center"
+                    >
                       <img
                         src="/vendors/images/icon/checkmarkIcon.svg"
                         alt="icon"
                         width="25"
-
                       />
-                      Vous payez votre trajet en un clic, via QR Code ou
-                      identifiant conducteur
-                    </li>
-                    <li class="flex justify-start items-center">
-                      <img
-                        src="/vendors/images/icon/checkmarkIcon.svg"
-                        alt="icon"
-                        width="25"
-
-                      />
-                      Vous suivez vos dépenses de transport dans un historique
-                      clair et simple
-                    </li>
-                    <li class="flex justify-start items-center">
-                      <img
-                        src="/vendors/images/icon/checkmarkIcon.svg"
-                        alt="icon"
-                        width="25"
-
-                      />
-                      Vous rechargez votre portefeuille mobile via Mobile Money
-                      ou carte bancaire
-                    </li>
-                    <li class="flex justify-start items-center">
-                      <img
-                        src="/vendors/images/icon/checkmarkIcon.svg"
-                        alt="icon"
-                        width="25"
-
-                      />
-                      Vous roulez plus sereinement, sans vous soucier du rendu
-                      de monnaie ou des pertes d'argent
-                    </li>
-                    <li class="flex justify-start items-center">
-                      <img
-                        src="/vendors/images/icon/checkmarkIcon.svg"
-                        alt="icon"
-                        width="25"
-
-                      />
-                      Vous bénéficiez d'un service rapide, fluide et moderne
+                      {{ feature }}
                     </li>
                   </ul>
 
                   <div class="mt-10">
                     <a href="#usagers" class="flex justify-start items-center gap-2">
                       <span class="text-black border-b-4 border-[#01B180]"
-                        >En savoir plus</span
+                        >{{ t('home2.learnMore') }}</span
                       >
 
                       <span>
@@ -170,4 +131,7 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Import du composable i18n
+const { t } = useI18n()
+</script>

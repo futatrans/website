@@ -37,7 +37,7 @@
                 </div>
                 <div class="footer-content">
                   <p>
-                    FUTA TRANS révolutionne le transport en Afrique avec une solution de paiement mobile sécurisée pour les conducteurs et les passagers.
+                    {{ t('footer.description') }}
                   </p> 
                   <div
                       class="flex justify-center sm:justify-start space-y-4 sm:space-y-0 mt-8 sm:flex-row flex-col"
@@ -73,22 +73,21 @@
                   <h3>
 
                     <span class="text-lg">
-                      Navigation
+                      {{ t('footer.navigation.title') }}
                     </span>
                   </h3>
                 </div>
 
                 <ul class="text-gray-600 space-y-4 text-sm">
                   <li>
-                    <a href="#" style="text-transform: none !important;">Pour les usagers</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.usagers') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">Pour les conducteurs</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.conducteurs') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">Pour la planète</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.planete') }}</a>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -107,25 +106,24 @@
 
 
                   <span class="text-lg">
-                      Lien utiles
+                      {{ t('footer.usefulLinks.title') }}
                     </span>
                   </h3>
 
                 </div>
                 <ul class="text-gray-600 space-y-4 text-sm">
                   <li>
-                    <a href="#" style="text-transform: none !important;">À propos</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.about') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">FAQ</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.faq') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">Mentions légales</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.legal') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">Politique de confidentialité</a>
+                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.privacy') }}</a>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -133,7 +131,7 @@
               <div class="single-footer-widget">
                 <div class="contact-box">
                   <div class="widget-head" style="text-transform: none !important;">
-                    Nous contacter
+                    {{ t('footer.contact.title') }}
                   </div>
                   
                   <div class="info">
@@ -198,7 +196,7 @@
                     <div class="link">
                       <a href="tel:+243817039144">+243 817 039 144</a>
                       <br />
-                      <span>📍 Kinshasa-Gombe</span>
+                      <span>{{ t('footer.contact.location') }}</span>
                     </div>
                   </div>
                 </div>
@@ -221,7 +219,7 @@
                 animation-name: fadeInLeft;
               "
             >
-              Copyright © 2024 FUTA TRANS. Tous droits réservés.
+              {{ t('footer.copyright') }}
             </p>
             <ul class="social-links" data-wow-delay=".5s">
               <li>
@@ -244,6 +242,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Import du composable i18n
+const { t } = useI18n()
+</script>
 
 <style scoped></style>

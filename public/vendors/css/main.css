@@ -4226,7 +4226,7 @@ input.main-search-input::placeholder {
 }
 
 .header-right {
-  gap: 30px;
+  gap: 0px;
 }
 @media (max-width: 1399px) {
   .header-right {
@@ -4662,11 +4662,11 @@ input.main-search-input::placeholder {
   -o-transform: translateY(10px);
 }
 .header-main .header-right {
-  gap: 30px;
+  gap: 0px;
 }
 @media (max-width: 1399px) {
   .header-main .header-right {
-    gap: 20px;
+    gap: 0px;
   }
 }
 .header-main .header-right .search-icon {
