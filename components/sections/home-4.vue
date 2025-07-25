@@ -138,8 +138,8 @@
                       data-tilt-max="10"
                     >
                       <img
-                        src="/img/mockups/wcuThumb1_1-1.png"
-                        class="w-[250px] lg:w-[800px]"
+                        src="/img/mockups/IPhone2.png"
+                        class="w-[250px] lg:w-[500px] xl:w-[600px] xl:ml-24"
                         alt="thumb"
                       />
                     </div>
@@ -147,8 +147,8 @@
                     <div
                       class="shape1"
                       style="
-                        width: 250px !important;
-                        max-width: 250px !important;
+                        width: 200px !important;
+                        max-width: 200px !important;
                       "
                     >
                       <img
