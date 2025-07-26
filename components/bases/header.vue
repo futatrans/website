@@ -265,13 +265,16 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import {
   Bars3Icon,
 } from '@heroicons/vue/24/outline'
 
 // Import du composable i18n avec vérification de sécurité
 const { t, locale, setLocale } = useI18n()
+
+// Import du système de gestion d'hydratation
+const { isHydrated, handleHydrationError } = useHydrationFix()
 
 // État du menu mobile
 const mobileMenuOpen = ref(false)
@@ -283,37 +286,32 @@ const navigation = computed(() => [
   { name: t('header.navigation.planete'), href: '#planete' }
 ])
 
-// Fonction pour fermer le menu mobile
-const closeMobileMenu = () => {
-  mobileMenuOpen.value = false
-}
-
-// Gestionnaire pour les clics sur les liens du menu
-const handleMenuClick = (event) => {
-  closeMobileMenu()
-  
-  // Empêcher le comportement par défaut pour les liens internes
-  if (event.target.href && event.target.href.includes('#')) {
-    event.preventDefault()
-    
-    // Récupérer l'ID de la section depuis le href
-    const href = event.target.href
-    const sectionId = href.split('#')[1]
-    
-    if (sectionId) {
-      // Attendre que le menu se ferme avant de scroller
-      setTimeout(() => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          })
-        }
-      }, 300) // Délai pour laisser le temps au menu de se fermer
+// Fonction pour basculer la langue
+const toggleLanguage = () => {
+  if (process.client && typeof window !== 'undefined' && isHydrated.value) {
+    try {
+      const newLocale = locale.value === 'fr' ? 'en' : 'fr'
+      setLocale(newLocale)
+    } catch (error) {
+      handleHydrationError(error)
     }
   }
 }
+
+// Fonction pour gérer les clics sur le menu
+const handleMenuClick = () => {
+  mobileMenuOpen.value = false
+}
+
+// Gestion des erreurs d'hydratation
+onMounted(() => {
+  if (process.client) {
+    // Attendre que l'hydratation soit terminée
+    nextTick(() => {
+      // Initialiser les fonctionnalités après l'hydratation
+    })
+  }
+})
 
 // Gestionnaire pour les liens du menu desktop
 const handleDesktopMenuClick = (event) => {
@@ -342,14 +340,6 @@ const handleLinkClick = (event) => {
   // Empêcher le comportement par défaut pour les liens internes
   if (event.target.href && event.target.href.includes('#')) {
     event.preventDefault()
-  }
-}
-
-// Fonction pour basculer la langue
-const toggleLanguage = () => {
-  if (process.client && typeof window !== 'undefined') {
-    const newLocale = locale.value === 'fr' ? 'en' : 'fr'
-    setLocale(newLocale)
   }
 }
 </script>

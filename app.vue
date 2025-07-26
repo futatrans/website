@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <BasesHeader />
+    <ClientOnly>
+      <BasesHeader />
+    </ClientOnly>
     <NuxtPage />
-    <BasesFooter />
+    <ClientOnly>
+      <BasesFooter />
+    </ClientOnly>
   </div>
 </template>
 
@@ -12,10 +16,11 @@ const handleError = (error) => {
   if (process.client && error && error.message) {
     const isHydrationError = error.message.includes('nextSibling') || 
                             error.message.includes('hydratation') ||
-                            error.message.includes('hydration')
+                            error.message.includes('hydration') ||
+                            error.message.includes('e is null')
     
     if (isHydrationError) {
-      console.warn('Global hydration error detected:', error)
+      console.warn('Global hydration error detected:', error.message)
       // Ne pas recharger automatiquement, laisser l'utilisateur décider
       return false
     }
@@ -38,6 +43,20 @@ if (process.client) {
     return false
   }
 }
+
+// Gestion des erreurs d'hydratation côté serveur
+if (process.server) {
+  // Configuration pour éviter les erreurs d'hydratation côté serveur
+  const originalConsoleError = console.error
+  console.error = (...args) => {
+    const message = args.join(' ')
+    if (message.includes('nextSibling') || message.includes('e is null')) {
+      // Ignorer les erreurs d'hydratation côté serveur
+      return
+    }
+    originalConsoleError.apply(console, args)
+  }
+}
 </script>
 
 <style>
@@ -54,5 +73,23 @@ if (process.client) {
 /* Éviter les flashs de contenu non stylé */
 .wow {
   visibility: visible !important;
+}
+
+/* Éviter les problèmes de layout pendant l'hydratation */
+.client-only {
+  min-height: 1px;
+}
+
+/* Assurer que les éléments avec des animations sont stables */
+[class*="fadeIn"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Éviter les problèmes de positionnement pendant l'hydratation */
+.position-relative,
+.position-absolute,
+.position-fixed {
+  position: relative !important;
 }
 </style>

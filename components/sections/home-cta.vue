@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div id="download-app" class="-top-[200px] absolute"></div>
-    <section class="cta-section" id="app">
+    <section class="cta-section">
       <div class="cta-container-wrapper style1">
         <div class="container">
           <div

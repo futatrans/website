@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/i18n.server.ts',
     '~/plugins/i18n.client.ts',
-    '~/plugins/hydration.client.ts'
+    '~/plugins/hydration.client.ts',
+    '~/plugins/hydration-error.client.ts'
   ],
 
   // Configuration pour éviter les warnings Vue Router sur les assets
@@ -44,6 +45,10 @@ export default defineNuxtConfig({
           manualChunks: undefined
         }
       }
+    },
+    // Configuration pour éviter les erreurs d'hydratation
+    optimizeDeps: {
+      include: ['vue', 'vue-router']
     }
   },
   
@@ -59,7 +64,12 @@ export default defineNuxtConfig({
     }
   },
 
+  // Configuration pour éviter les erreurs d'hydratation
   app: {
+    // Configuration pour éviter les erreurs d'hydratation
+    keepalive: false,
+    // Configuration pour éviter les erreurs d'hydratation
+    pageTransition: false,
     head: {
       title: 'FUTA TRANS - Transport payé en un clic, en toute sécurité',
       meta: [
