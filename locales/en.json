@@ -10,7 +10,7 @@
     "language": "Language"
   },
   "home1": {
-    "title": "Transport paid in one click, with total security",
+    "title": "Pay for your ride in one click, in total security",
     "description": "FUTA TRANS is a mobile payment application designed for motorcycle-taxi drivers, taxi operators, and their passengers.​",
     "downloadButton": "Download the App",
     "learnMoreButton": "Learn more",
@@ -22,9 +22,9 @@
   "home2": {
     "subtitle": "Features",
     "title": "For passengers",
-    "description": "FUTA TRANS gives you the freedom to travel without relying on physical cash, all through your mobile phone:",
+    "description": "FUTA TRANS gives you the freedom to ride without relying on physical cash, all through your mobile phone :",
     "features": [
-      "Pay for your ride in one click via QR Code or driver ID",
+      "Pay for your ride in one click via QR Code or driver code",
       "Track your transport expenses in a clear and simple history",
       "Recharge your wallet via Mobile Money or bank card",
       "Ride with confidence — no more change issues or lost cash",
@@ -59,7 +59,7 @@
     "title": "For drivers",
     "description": "FUTA TRANS is more than just a payment method — it’s a tool to professionalize your business :",
     "features": [
-      "Secure payments via QR Code or unique driver ID",
+      "Secure payments via QR Code or unique driver code",
       "Monitor your daily, weekly, and monthly income",
       "Access clear financial records to apply for credit or insurance",
       "Withdraw your money instantly via Mobile Money or bank – with no fees",
@@ -76,7 +76,7 @@
     "features": [
       "🎁 100 electric motorcycles offered to the most active drivers",
       "We support drivers in adopting electric motorcycles and facilitate access to green leasing or microcredit to acquire them",
-      "Rolling out a network of charging and battery swap stations",
+      "Deploying a  network of EV charging and battery swap stations",
       "Reducing noise, pollution, and promoting sustainable urban mobility"
     ],
     "learnMore": "Learn more"

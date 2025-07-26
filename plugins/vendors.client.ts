@@ -9,13 +9,10 @@ export default defineNuxtPlugin(() => {
   }
 
   function loadVendors() {
-    // CSS non-critiques - chargement après le rendu initial
+    // CSS critiques - chargement après le rendu initial
     const cssFiles = [
-      '/vendors/css/animate.css',
-      '/vendors/css/magnific-popup.css',
-      '/vendors/css/meanmenu.css',
-      '/vendors/css/swiper-bundle.min.css',
-      '/vendors/css/nice-select.css'
+      '/vendors/css/animate.css',      // ✅ Utilisé pour les animations WOW
+      '/vendors/css/swiper-bundle.min.css'  // ✅ Utilisé pour le slider Swiper
     ]
 
     cssFiles.forEach(href => {
@@ -27,18 +24,12 @@ export default defineNuxtPlugin(() => {
       }
     })
 
-    // Scripts non-critiques - chargement après jQuery et Bootstrap
+    // Scripts critiques - chargement après jQuery et Bootstrap
     const scriptFiles = [
-      '/vendors/js/jquery.waypoints.js',
-      '/vendors/js/jquery.counterup.min.js',
-      '/vendors/js/viewport.jquery.js',
-      '/vendors/js/tilt.min.js',
-      '/vendors/js/swiper-bundle.min.js',
-      '/vendors/js/jquery.meanmenu.min.js',
-      '/vendors/js/magnific-popup.min.js',
-      '/vendors/js/wow.min.js',
-      '/vendors/js/nice-select.min.js',
-      '/vendors/js/main.js'
+      '/vendors/js/wow.min.js',           // ✅ Utilisé pour les animations
+      '/vendors/js/swiper-bundle.min.js', // ✅ Utilisé pour le slider
+      '/vendors/js/tilt.min.js',          // ✅ Utilisé pour l'effet tilt
+      '/vendors/js/main-optimized.js'     // ✅ Version optimisée avec seulement les fonctionnalités utilisées
     ]
 
     loadScriptsSequentially(scriptFiles)

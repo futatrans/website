@@ -179,6 +179,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: '/vendors/css/bootstrap.min.css' },
         { rel: 'stylesheet', href: '/vendors/css/all.min.css' },
         { rel: 'stylesheet', href: '/vendors/css/main.css' },
+        { rel: 'stylesheet', href: '/vendors/css/animate.css' },
+        { rel: 'stylesheet', href: '/vendors/css/swiper-bundle.min.css' },
         
 
         
