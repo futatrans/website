@@ -22,13 +22,40 @@ export default defineNuxtConfig({
   // Configuration des plugins
   plugins: [
     '~/plugins/i18n.server.ts',
-    '~/plugins/i18n.client.ts'
+    '~/plugins/i18n.client.ts',
+    '~/plugins/hydration.client.ts'
   ],
 
   // Configuration pour éviter les warnings Vue Router sur les assets
   router: {
     options: {
       strict: false
+    }
+  },
+
+  // Configuration pour éviter les erreurs d'hydratation SSR
+  ssr: true,
+  
+  // Configuration pour gérer les erreurs d'hydratation
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
+  },
+  
+  // Configuration pour gérer les erreurs d'hydratation
+  experimental: {
+    payloadExtraction: false
+  },
+
+  // Configuration pour les erreurs d'hydratation
+  nitro: {
+    experimental: {
+      wasm: true
     }
   },
 

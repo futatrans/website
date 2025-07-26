@@ -132,6 +132,16 @@
 </template>
 
 <script setup>
-// Import du composable i18n
+// Import du composable i18n avec vérification de sécurité
 const { t } = useI18n()
+
+// Vérification de sécurité pour les traductions
+const safeTranslate = (key) => {
+  try {
+    return t(key) || key
+  } catch (error) {
+    console.warn(`Translation error for key: ${key}`, error)
+    return key
+  }
+}
 </script>

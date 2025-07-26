@@ -270,17 +270,17 @@ import {
   Bars3Icon,
 } from '@heroicons/vue/24/outline'
 
-// Import du composable i18n
+// Import du composable i18n avec vérification de sécurité
 const { t, locale, setLocale } = useI18n()
 
 // État du menu mobile
 const mobileMenuOpen = ref(false)
 
-// Navigation items
+// Navigation avec vérification de sécurité
 const navigation = computed(() => [
   { name: t('header.navigation.usagers'), href: '#usagers' },
   { name: t('header.navigation.conducteurs'), href: '#conducteurs' },
-  { name: t('header.navigation.planete'), href: '#planete' },
+  { name: t('header.navigation.planete'), href: '#planete' }
 ])
 
 // Fonction pour fermer le menu mobile
@@ -347,8 +347,10 @@ const handleLinkClick = (event) => {
 
 // Fonction pour basculer la langue
 const toggleLanguage = () => {
-  const newLocale = locale.value === 'fr' ? 'en' : 'fr'
-  setLocale(newLocale)
+  if (process.client && typeof window !== 'undefined') {
+    const newLocale = locale.value === 'fr' ? 'en' : 'fr'
+    setLocale(newLocale)
+  }
 }
 </script>
 

@@ -1,10 +1,10 @@
-import { ref, computed, reactive } from 'vue'
+import { ref, computed, reactive, onMounted } from 'vue'
 import frMessages from '~/locales/fr.json'
 import enMessages from '~/locales/en.json'
 
 // État global réactif
 const state = reactive({
-  currentLocale: 'fr',
+  currentLocale: 'en',
   isInitialized: false,
   messages: {
     fr: frMessages,
@@ -14,7 +14,7 @@ const state = reactive({
 
 // Fonction pour définir un cookie
 const setCookie = (name, value, days = 365) => {
-  if (process.client) {
+  if (process.client && typeof document !== 'undefined') {
     const expires = new Date()
     expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000))
     
@@ -30,7 +30,7 @@ const setCookie = (name, value, days = 365) => {
 
 // Fonction pour récupérer un cookie
 const getCookie = (name) => {
-  if (process.client) {
+  if (process.client && typeof document !== 'undefined' && typeof document.cookie !== 'undefined') {
     const nameEQ = name + "="
     const ca = document.cookie.split(';')
     for (let i = 0; i < ca.length; i++) {
@@ -44,6 +44,11 @@ const getCookie = (name) => {
 
 // Fonction pour obtenir une traduction
 const t = (key) => {
+  // Vérification de sécurité pour éviter les erreurs d'hydratation
+  if (!key || typeof key !== 'string') {
+    return key || ''
+  }
+
   const keys = key.split('.')
   let value = state.messages[state.currentLocale]
   
@@ -57,7 +62,7 @@ const t = (key) => {
       value = value[k]
     } else {
       // Fallback vers français si la clé n'existe pas
-      if (state.currentLocale !== 'fr') {
+      if (state.currentLocale !== 'en') {
         const frValue = state.messages.fr
         if (frValue) {
           let fallbackValue = frValue
@@ -92,17 +97,24 @@ const setLocale = (locale) => {
 // Fonction pour initialiser la langue
 const initLocale = () => {
   if (!state.isInitialized) {
-    if (process.client) {
-      const savedLocale = getCookie('locale')
-      if (savedLocale && (savedLocale === 'fr' || savedLocale === 'en')) {
-        setLocale(savedLocale)
+    try {
+      if (process.client && typeof document !== 'undefined') {
+        const savedLocale = getCookie('locale')
+        if (savedLocale && (savedLocale === 'fr' || savedLocale === 'en')) {
+          setLocale(savedLocale)
+        } else {
+          setLocale('en') // Langue par défaut
+        }
       } else {
-        setLocale('fr') // Langue par défaut
+        setLocale('en') // Langue par défaut côté serveur
       }
-    } else {
-      setLocale('fr') // Langue par défaut côté serveur
+      state.isInitialized = true
+    } catch (error) {
+      console.warn('Error initializing locale:', error)
+      // Fallback en cas d'erreur
+      setLocale('en')
+      state.isInitialized = true
     }
-    state.isInitialized = true
   }
 }
 
@@ -113,8 +125,12 @@ const locale = computed(() => state.currentLocale)
 const currentMessages = computed(() => state.messages[state.currentLocale] || {})
 
 export const useI18n = () => {
-  // Initialiser automatiquement
-  initLocale()
+  // Initialiser automatiquement avec gestion d'erreur
+  try {
+    initLocale()
+  } catch (error) {
+    console.warn('Error in useI18n initialization:', error)
+  }
 
   return {
     t,
