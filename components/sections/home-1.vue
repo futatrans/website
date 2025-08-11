@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="intro-section">
+    <section class="intro-section mt-24">
       <div class="intro-container-wrapper style1">
         <div class="container">
           <div class="intro-wrapper style1 fix">
@@ -23,7 +23,7 @@
               <div class="row">
                 <div class="col-xl-7 order-1 order-xl-1 pt-20 lg:pt-0 -mb-[200px]">
                   <div class=" sm:-mb-24 intro-content intro-content-responsive flex flex-col justify-center items-center sm:items-start">
-                    <div class="intro-section-title">
+                    <div class="intro-section-title -mt-20 sm:-mt-0">
                       
                       <h1
                         class="intro-title wow fadeInUp "

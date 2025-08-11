@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
   if (process.client) {
-    // Gestionnaire d'erreurs d'hydratation amélioré
+    // Gestionnaire d'erreurs d'hydratation amélioré (léger et non intrusif)
     const handleHydrationError = (error: Error) => {
       if (error && error.message) {
         const isHydrationError = error.message.includes('nextSibling') || 
@@ -9,11 +9,12 @@ export default defineNuxtPlugin(() => {
                                 error.message.includes('e is null')
         
         if (isHydrationError) {
-          console.warn('Hydration error detected:', error.message)
-          
-          // Au lieu de recharger, on attend que l'hydratation se stabilise
+          if (process.dev) {
+            console.warn('Hydration error detected:', error.message)
+          }
+          // Au lieu de recharger, on laisse Nuxt/Vue stabiliser l'UI
+          // Déclenche un évènement inoffensif pour forcer un léger recalcul de layout
           setTimeout(() => {
-            // Forcer une mise à jour du DOM
             if (typeof window !== 'undefined' && window.dispatchEvent) {
               window.dispatchEvent(new Event('resize'))
             }
@@ -41,65 +42,38 @@ export default defineNuxtPlugin(() => {
 
     // Intercepter les erreurs non capturées
     window.addEventListener('unhandledrejection', (event) => {
-      if (handleHydrationError(new Error(event.reason))) {
+      // event.reason peut être string ou Error
+      const reason = event?.reason instanceof Error ? event.reason : new Error(String(event?.reason ?? ''))
+      if (handleHydrationError(reason)) {
         event.preventDefault()
       }
     })
 
-    // Attendre que le DOM soit complètement chargé
+    // Vérifier une seule fois après chargement du DOM
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
-        // Vérifier les éléments problématiques
-        checkForHydrationIssues()
+        initializeAnimatedElements()
       })
     } else {
-      checkForHydrationIssues()
+      initializeAnimatedElements()
     }
-
-    // Vérifier périodiquement les problèmes d'hydratation
-    let hydrationCheckInterval: NodeJS.Timeout | null = null
-    
-    const startHydrationMonitoring = () => {
-      if (hydrationCheckInterval) {
-        clearInterval(hydrationCheckInterval)
-      }
-      
-      hydrationCheckInterval = setInterval(() => {
-        checkForHydrationIssues()
-      }, 2000) // Vérifier toutes les 2 secondes
-    }
-
-    // Démarrer le monitoring après un délai
-    setTimeout(startHydrationMonitoring, 1000)
   }
 })
 
-function checkForHydrationIssues() {
+function initializeAnimatedElements() {
   try {
-    // Vérifier les éléments qui pourraient causer des problèmes d'hydratation
+    // Initialiser proprement les éléments avec animations (WOW / animate.css etc.)
     const elements = document.querySelectorAll('[data-wow-delay], [class*="wow"]')
-    
-    elements.forEach(element => {
-      // S'assurer que les éléments avec des animations sont correctement initialisés
-      if (element && !element.hasAttribute('data-wow-initialized')) {
+    elements.forEach((element) => {
+      if (!element.hasAttribute('data-wow-initialized')) {
         element.setAttribute('data-wow-initialized', 'true')
       }
-      
-      // Vérifier que l'élément a un parent valide
-      if (element && !element.parentNode) {
-        console.warn('Element without parent detected:', element)
-      }
     })
-
-    // Vérifier les éléments avec des références null
-    const allElements = document.querySelectorAll('*')
-    allElements.forEach(element => {
-      if (element && element.nextSibling === null && element.previousSibling === null) {
-        // Élément isolé, potentiellement problématique
-        console.warn('Isolated element detected:', element)
-      }
-    })
+    // Ne PAS scanner tout le DOM ni logger d'éléments « isolés ».
+    // De nombreux éléments peuvent être enfant unique sans next/previousSibling, ce n'est pas une erreur.
   } catch (error) {
-    console.warn('Error during hydration check:', error)
+    if (process.dev) {
+      console.debug('Hydration init skipped due to error:', error)
+    }
   }
 } 

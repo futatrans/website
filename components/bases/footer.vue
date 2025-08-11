@@ -27,13 +27,13 @@
             >
               <div class="single-footer-widget">
                 <div class="widget-head">
-                  <a href="#">
+                  <NuxtLink to="/">
                     <img
                       src="/img/logo/logo.png"
                       class="w-[120px]"
                       alt="logo-img"
                     />
-                  </a>
+                  </NuxtLink>
                 </div>
                 <div class="footer-content">
                   <p>
@@ -80,13 +80,13 @@
 
                 <ul class="text-gray-600 space-y-4 text-sm">
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.usagers') }}</a>
+                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.usagers') }}</NuxtLink>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.conducteurs') }}</a>
+                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.conducteurs') }}</NuxtLink>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.navigation.planete') }}</a>
+                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.planete') }}</NuxtLink>
                   </li>
                 </ul>
               </div>
@@ -116,13 +116,13 @@
                     <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.about') }}</a>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.faq') }}</a>
+                    <NuxtLink to="/faq" style="text-transform: none !important;">{{ t('footer.usefulLinks.faq') }}</NuxtLink>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.legal') }}</a>
+                    <NuxtLink to="/cgu" style="text-transform: none !important;">{{ t('footer.usefulLinks.legal') }}</NuxtLink>
                   </li>
                   <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.privacy') }}</a>
+                    <NuxtLink to="/policy" style="text-transform: none !important;">{{ t('footer.usefulLinks.privacy') }}</NuxtLink>
                   </li>
                 </ul>
               </div>

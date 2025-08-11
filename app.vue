@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <ClientOnly>
       <BasesHeader />
-    </ClientOnly>
     <NuxtPage />
-    <ClientOnly>
       <BasesFooter />
-    </ClientOnly>
   </div>
 </template>
 

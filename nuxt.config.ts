@@ -88,7 +88,7 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'FUTA TRANS - Transport payé en un clic, en toute sécurité' },
         { property: 'og:description', content: "Application mobile de paiement pour motos-taxis, taxis et clients. Sécurité, traçabilité, mobilité moderne et programmes verts pour l'Afrique." },
-        { property: 'og:image', content: '/img/cover.png' },
+        { property: 'og:image', content: '/cover.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:type', content: 'image/png' },
@@ -102,37 +102,37 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'FUTA TRANS - Transport payé en un clic, en toute sécurité' },
         { name: 'twitter:description', content: "Application mobile de paiement pour motos-taxis, taxis et clients. Sécurité, traçabilité, mobilité moderne et programmes verts pour l'Afrique." },
-        { name: 'twitter:image', content: '/img/cover.png' },
+        { name: 'twitter:image', content: '/cover.png' },
         { name: 'twitter:image:alt', content: 'FUTA TRANS - Application de transport et paiement mobile' },
         { name: 'twitter:site', content: '@futatrans' },
         { name: 'twitter:creator', content: '@futatrans' },
         
         // LinkedIn
         { property: 'linkedin:owner', content: 'futatrans' },
-        { property: 'linkedin:image', content: '/img/cover.png' },
+        { property: 'linkedin:image', content: '/cover.png' },
         
         // WhatsApp
-        { property: 'og:image:secure_url', content: 'https://futatrans.com/img/cover.png' },
+        { property: 'og:image:secure_url', content: 'https://futatrans.com/cover.png' },
         
         // Pinterest
         { name: 'pinterest-rich-pin', content: 'true' },
         
         // Discord
-        { property: 'discord:image', content: '/img/cover.png' },
+        { property: 'discord:image', content: '/cover.png' },
         
         // Telegram
-        { property: 'telegram:image', content: '/img/cover.png' },
+        { property: 'telegram:image', content: '/cover.png' },
         
         // Reddit
-        { property: 'reddit:image', content: '/img/cover.png' },
+        { property: 'reddit:image', content: '/cover.png' },
         
         // Tumblr
-        { property: 'tumblr:image', content: '/img/cover.png' },
+        { property: 'tumblr:image', content: '/cover.png' },
         
         // Réseaux sociaux africains
-        { property: 'snapchat:image', content: '/img/cover.png' },
-        { property: 'tiktok:image', content: '/img/cover.png' },
-        { property: 'instagram:image', content: '/img/cover.png' },
+        { property: 'snapchat:image', content: '/cover.png' },
+        { property: 'tiktok:image', content: '/cover.png' },
+        { property: 'instagram:image', content: '/cover.png' },
         
         // Métadonnées supplémentaires
         { name: 'theme-color', content: '#0A3A3C' },
@@ -153,13 +153,8 @@ export default defineNuxtConfig({
         { name: 'business:contact_data:email', content: 'hello@futatrans.com' },
         
         // Sécurité - En-têtes de sécurité renforcés
-        { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-        { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://api.fontshare.com https://cdn.fontshare.com https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" },
-        { 'http-equiv': 'Strict-Transport-Security', content: 'max-age=31536000; includeSubDomains; preload' },
-        { 'http-equiv': 'X-Frame-Options', content: 'DENY' },
-        { 'http-equiv': 'X-Content-Type-Options', content: 'nosniff' },
-        { 'http-equiv': 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-        { 'http-equiv': 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()' },
+        // moved to server headers: X-UA-Compatible
+        // moved to server headers: CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
         
         // Performance
         { name: 'mobile-web-app-capable', content: 'yes' },
@@ -183,7 +178,7 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/favicon/site.webmanifest' },
         
         // Préchargement de l'image de couverture
-        { rel: 'preload', as: 'image', href: '/img/cover.png' },
+        { rel: 'preload', as: 'image', href: '/cover.png' },
         
         // CSS critiques - chargement avant le rendu
         { rel: 'stylesheet', href: '/vendors/css/bootstrap.min.css' },

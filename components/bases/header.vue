@@ -138,7 +138,7 @@
               <div class="header-left">
                 <div class="logo">
                   <a href="#" class="header-logo">
-                    <img src="/img/logo/logo.png" width="120" alt="logo-img" />
+                    <img src="/img/logo/logo.png" width="100" alt="logo-img" />
                   </a>
                 </div>
               </div>
@@ -351,8 +351,14 @@ const handleLinkClick = (event) => {
 }
 
 .header-main {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between -mt-6 sm:-mt-6;
 }
+
+
+.sticky .header-main {
+  @apply -mt-0 sm:mt-0 py-4;
+}
+
 
 .header-left {
   @apply flex-shrink-0;

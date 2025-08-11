@@ -4422,12 +4422,12 @@ input.main-search-input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 0px 0;
   z-index: 99;
 }
 @media (max-width: 1899px) {
   .header-main {
-    padding: 20px 10px;
+    padding: 0px 0px;
   }
 }
 .header-main .main-menu ul {
@@ -4708,7 +4708,7 @@ input.main-search-input::placeholder {
   color: var(--white) !important;
 }
 .sticky.header-1 {
-  padding: 0 10px;
+  padding: 0 0px;
 }
 .sticky.header-1 .logo {
   display: block;
@@ -6603,12 +6603,12 @@ input.main-search-input::placeholder {
   font-size: 12px;
   font-weight: 500;
   transition: all 0.3s ease-in-out !important;
-  background-image: url(../../assets/images/icon/chevron-right.svg);
+  background-image: url(/vendors/images/icon/chevron-right.svg);
   color: var(--theme2);
 }
 .wp-content .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
   font-size: 12px;
-  background-image: url(../../assets/images/icon/chevron-down.svg);
+  background-image: url(/vendors/images/icon/chevron-down.svg);
   font-weight: 500;
   color: var(--theme2);
   transform: rotate(0);
