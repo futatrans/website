@@ -109,5 +109,202 @@
       "location": "📍 Kinshasa-Gombe"
     },
     "copyright": "Copyright © 2024 FUTA TRANS. Tous droits réservés."
+  },
+  "faq": {
+    "header": {
+      "titleMin": "FAQ",
+      "title": "Questions fréquentes",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "intro": "Trouvez rapidement des réponses aux questions les plus posées sur FUTA TRANS.",
+    "questions": {
+      "q1": {
+        "question": "Comment payer un trajet ?",
+        "answer": "Scannez le QR Code du conducteur ou saisissez son identifiant. Confirmez le montant, et c’est réglé !"
+      },
+      "q2": {
+        "question": "Je suis conducteur. Comment encaisser ?",
+        "answer": "Créez un compte FUTA TRANS, générez votre QR code ou votre code unique, et commencez à encaisser vos paiements."
+      },
+      "q3": {
+        "question": "Mon argent est-il en sécurité ?",
+        "answer": "Oui. Tous les paiements sont sécurisés avec des partenaires agréés (Mobile Money, banques). Vos données sont cryptées."
+      },
+      "q4": {
+        "question": "Puis-je retirer l’argent reçu ?",
+        "answer": "Oui. À tout moment, vous pouvez transférer votre solde vers votre compte bancaire ou portefeuille Mobile Money."
+      },
+      "q5": {
+        "question": "Comment recharger mon portefeuille ?",
+        "answer": "Vous pouvez recharger votre portefeuille FUTA TRANS en toute sécurité via Mobile Money (M-Pesa, Orange Money, Airtel Money…) ou carte bancaire (VISA, MasterCard)."
+      },
+      "q6": {
+        "question": "FUTA TRANS est disponible où ?",
+        "answer": "Nous sommes présents à Kinshasa et en phase de déploiement dans d'autres grandes villes de la RDC."
+      },
+      "q7": {
+        "question": "Est-ce que FUTA TRANS fonctionne sans Internet ?",
+        "answer": "Une connexion Internet est nécessaire pour utiliser l’application. Cependant, certaines fonctions hors-ligne (historique, solde) sont accessibles temporairement."
+      },
+      "q8": {
+        "question": "Puis-je annuler un paiement après envoi ?",
+        "answer": "Non. Une fois le paiement confirmé, il est irréversible. Veuillez toujours vérifier les détails avant validation."
+      },
+      "q9": {
+        "question": "Comment signaler un problème avec un conducteur ou un passager ?",
+        "answerPrefix": "Utilisez la fonction de signalement dans l'application ou écrivez-nous à"
+      },
+      "q10": {
+        "question": "FUTA TRANS propose-t-il une assistance clientèle ?",
+        "answer": "Oui. Notre service client est joignable par email ou téléphone du lundi au samedi, de 8h à 18h."
+      }
+    }
+  },
+  "policy": {
+    "header": {
+      "titleMin": "Policy",
+      "title": "Politique de confidentialité",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "version": "Version 1.0 — Dernière mise à jour : 1 Août 2025",
+    "intro1": "Chez FUTA TRANS, nous nous engageons à protéger votre vie privée et vos données personnelles. Cette politique de confidentialité détaille la manière dont nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez notre application mobile pour effectuer des paiements de trajets.",
+    "intro2": "Notre objectif est de vous offrir un service de paiement sécurisé et transparent, tout en respectant scrupuleusement la confidentialité de vos données.",
+    "sections": {
+      "collectedData": {
+        "title": "1. Les données que nous collectons",
+        "intro": "Afin de vous fournir notre service de paiement, nous collectons les types d'informations suivants :",
+        "items": {
+          "personal": "Informations personnelles : nom, numéro de téléphone, adresse e-mail, nécessaires pour sécuriser votre compte.",
+          "payment": "Informations de paiement : données nécessaires pour traiter vos transactions (Mobile Money, carte bancaire), traitées par des prestataires certifiés.",
+          "usage": "Données d’utilisation : historique de paiements, montants, fréquence d'utilisation — pour améliorer le service et prévenir la fraude.",
+          "technical": "Données techniques : type d'appareil, modèle, version du système et de l'application — pour assurer la compatibilité.",
+          "location": "Informations de géolocalisation : collectées avec votre consentement explicite pour renforcer la sécurité."
+        }
+      },
+      "useOfData": {
+        "title": "2. Comment et pourquoi nous utilisons vos données",
+        "intro": "Vos informations nous sont indispensables pour les finalités suivantes :",
+        "items": {
+          "execution": "Exécution des paiements : traiter et valider vos transactions rapidement et en toute sécurité.",
+          "security": "Sécurité et authentification : protéger votre compte et prévenir les activités frauduleuses.",
+          "improvement": "Amélioration du service : analyser l’utilisation pour optimiser la plateforme.",
+          "communication": "Communication : notifications importantes relatives à vos transactions et à la sécurité.",
+          "legal": "Conformité légale : obligations en matière de lutte contre le blanchiment, la fraude et le financement du terrorisme.",
+          "offers": "Offres personnalisées : avec votre accord, propositions adaptées (fidélité, services financiers partenaires)."
+        }
+      },
+      "sharing": {
+        "title": "3. Partage des données",
+        "intro": "La confidentialité de vos données est notre priorité. Nous ne vendons ni ne louons vos informations. Elles peuvent être partagées uniquement avec :",
+        "items": {
+          "providers": "Prestataires techniques : paiement, hébergement, sécurité — soumis à des engagements stricts de confidentialité.",
+          "partners": "Partenaires financiers ou institutionnels : avec votre accord explicite, pour des services spécifiques (leasing, crédits).",
+          "authorities": "Autorités réglementaires : en cas d’obligation légale (mandat, enquête officielle, etc.)."
+        }
+      },
+      "security": {
+        "title": "4. Sécurité des données",
+        "text": "Mesures techniques et organisationnelles rigoureuses : chiffrement en transit et au repos, pare-feu, contrôles d’accès stricts."
+      },
+      "rights": {
+        "title": "5. Vos droits",
+        "intro": "Vous restez en contrôle de vos données personnelles. Conformément aux lois en vigueur, vous disposez des droits suivants :",
+        "items": {
+          "access": "Droit d’accès : obtenir une copie de vos données personnelles.",
+          "rectification": "Droit de rectification : corriger ou mettre à jour vos informations.",
+          "erasure": "Droit à l’effacement : suppression de votre compte et de vos données, sous réserve d’obligations légales.",
+          "withdraw": "Droit de retirer votre consentement : notamment pour la géolocalisation."
+        },
+        "contactText": "Pour exercer vos droits ou pour toute question, contactez-nous :"
+      }
+    },
+    "emails": {
+      "privacy": "privacy@futatrans.com"
+    }
+  },
+  "cgu": {
+    "header": {
+      "titleMin": "CGU",
+      "title": "Conditions générales d’utilisation",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "lastUpdate": "Dernière mise à jour : 1 Août 2025",
+    "intro": "Les présentes Conditions Générales d’Utilisation régissent l’accès et l’utilisation de l’application mobile FUTA TRANS par tout utilisateur, usager (passager) ou conducteur.",
+    "sections": {
+      "object": {
+        "title": "1. Objet",
+        "text": "FUTA TRANS permet aux usagers de payer leurs trajets (motos-taxis, taxis…) et aux conducteurs d’encaisser ces paiements de manière sécurisée et traçable."
+      },
+      "acceptance": {
+        "title": "2. Acceptation",
+        "text": "En téléchargeant, installant ou utilisant l’application, vous acceptez sans réserve les présentes CGU."
+      },
+      "registration": {
+        "title": "3. Inscription",
+        "items": {
+          "free": "L’inscription est gratuite pour tous les utilisateurs.",
+          "accurate": "Fournir des informations exactes et à jour (nom, téléphone, email…).",
+          "single": "Un seul compte est autorisé par utilisateur."
+        }
+      },
+      "passengers": {
+        "title": "4. Utilisation par les usagers (passagers)",
+        "servicesTitle": "4.1 Services proposés",
+        "services": {
+          "recharge": "Recharger son portefeuille via Mobile Money ou carte bancaire.",
+          "pay": "Payer un trajet via QR Code ou identifiant du conducteur.",
+          "history": "Consulter l’historique de ses paiements.",
+          "receipt": "Recevoir une preuve électronique de paiement."
+        },
+        "obligationsTitle": "4.2 Obligations de l’usager",
+        "obligations": {
+          "noFraud": "Ne pas falsifier ses informations ou effectuer de paiements frauduleux.",
+          "paymentRules": "Respecter les conditions de paiement définies par l’application.",
+          "fairUse": "Utiliser le service de manière loyale et sécurisée."
+        }
+      },
+      "drivers": {
+        "title": "5. Utilisation par les conducteurs",
+        "servicesTitle": "5.1 Services proposés",
+        "services": {
+          "collect": "Encaisser un paiement via QR Code ou identifiant unique.",
+          "track": "Suivre ses revenus journaliers, hebdomadaires et mensuels.",
+          "withdraw": "Retirer ses fonds via Mobile Money ou compte bancaire.",
+          "programs": "Accéder à des programmes exclusifs (leasing, formation, etc.).",
+          "statements": "Générer des relevés pour preuve de revenus."
+        },
+        "obligationsTitle": "5.2 Obligations du conducteur",
+        "obligations": {
+          "truth": "Fournir des informations véridiques sur son identité et son activité.",
+          "realUse": "Utiliser l’application uniquement pour des prestations réelles de transport.",
+          "courtesy": "Respecter les règles de conduite, de sécurité et de courtoisie envers les passagers."
+        }
+      },
+      "accounts": {
+        "title": "6. Accès et suspension des comptes",
+        "intro": "FUTA TRANS peut suspendre ou clôturer tout compte en cas :",
+        "items": {
+          "fraud": "D’usage frauduleux ou illicite de l’application.",
+          "breach": "De manquement grave aux présentes CGU.",
+          "behavior": "De comportement menaçant, injurieux ou dangereux envers d’autres utilisateurs."
+        }
+      },
+      "availability": {
+        "title": "7. Disponibilité du service",
+        "text": "Service accessible 24h/24, 7j/7, sauf cas de force majeure, maintenance ou incident technique indépendant de notre volonté. Aucune indemnité en cas d’interruption temporaire."
+      },
+      "liability": {
+        "title": "8. Responsabilité",
+        "text": "FUTA TRANS ne peut être tenu responsable des litiges entre usagers et conducteurs hors de l’application."
+      },
+      "data": {
+        "title": "9. Protection des données",
+        "text": "Les données sont traitées conformément à notre Politique de confidentialité. Droits d’accès, modification et suppression applicables."
+      },
+      "changes": {
+        "title": "10. Modification des CGU",
+        "text": "FUTA TRANS peut modifier les CGU à tout moment. Toute modification sera notifiée via l’application. L’utilisation continue vaut acceptation."
+      }
+    }
   }
 } 

@@ -2,12 +2,12 @@
   <div class="relative">
     <div id="usagers" class="-top-[200px] absolute"></div>
     <!-- About Us Section S T A R T -->
-    <section class="about-section fix">
+    <section class="about-section fix -mt-16">
       <div class="about-container-wrapper style1">
-        <div class="container">
+        <div class="container ">
           <div class="about-wrapper style1">
             <div class="row gy-5 gx-60">
-              <div class="col-xl-6">
+              <div class="col-xl-6 ">
                 <div class="about-thumb">
                   <div class="bg opacity-20"></div>
                   <div class="thumbShape1 d-none d-xxl-block cir36">

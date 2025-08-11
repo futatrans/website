@@ -2,122 +2,33 @@
   <main class="py-16 md:py-24">
     <section>
       <SectionsHeaderDefault
-        title_min="FAQ"
-        title="Questions fréquentes"
-        description="FUTA TRANS – Version 1.0"
+        :title_min="t('faq.header.titleMin')"
+        :title="t('faq.header.title')"
+        :description="t('faq.header.description')"
       />
     </section>
     <section>
-      <div class="container mt-10">
-        <header class="mb-10 max-w-3xl mx-auto">
+      <div class="container">
+        <header class="mb-10 max-w-3xl mx-auto mt-10">
           <h1 class="sr-only">FAQ – Questions Fréquentes</h1>
           <p class="text-gray-700">
-            Trouvez rapidement des réponses aux questions les plus posées sur FUTA TRANS.
+            {{ t('faq.intro') }}
           </p>
         </header>
 
         <div class="max-w-3xl mx-auto space-y-0 faq-accordion">
-          <details class="faq-item">
+          <details class="faq-item" v-for="(key, idx) in faqKeys" :key="key">
             <summary>
-              1. Comment payer un trajet ?
+              {{ idx + 1 }}. {{ t('faq.questions.' + key + '.question') }}
               <span class="icon" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              Scannez le QR Code du conducteur ou saisissez son identifiant. Confirmez le montant, et c’est réglé !
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              2. Je suis conducteur. Comment encaisser ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Créez un compte FUTA TRANS, générez votre QR code ou votre code unique, et commencez à encaisser vos paiements.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              3. Mon argent est-il en sécurité ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Oui. Tous les paiements sont sécurisés avec des partenaires agréés (Mobile Money, banques). Vos données sont cryptées.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              4. Puis-je retirer l’argent reçu ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Oui. À tout moment, vous pouvez transférer votre solde vers votre compte bancaire ou portefeuille Mobile Money.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              5. Comment recharger mon portefeuille ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Vous pouvez recharger votre portefeuille FUTA TRANS en toute sécurité via :
-              <ul class="list-disc pl-6 mt-2">
-                <li>Mobile Money (M-Pesa, Orange Money, Airtel Money…)</li>
-                <li>Carte bancaire (VISA, MasterCard)</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              6. FUTA TRANS est disponible où ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Nous sommes présents à Kinshasa et en phase de déploiement dans d'autres grandes villes de la RDC.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              7. Est-ce que FUTA TRANS fonctionne sans Internet ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Une connexion Internet est nécessaire pour utiliser l’application. Cependant, certaines fonctions hors-ligne (historique, solde) sont accessibles temporairement.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              8. Puis-je annuler un paiement après envoi ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Non. Une fois le paiement confirmé, il est irréversible. Veuillez toujours vérifier les détails avant validation.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              9. Comment signaler un problème avec un conducteur ou un passager ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Utilisez la fonction de signalement dans l'application ou écrivez-nous à <a href="mailto:support@futatrans.com" class="underline">support@futatrans.com</a>.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              10. FUTA TRANS propose-t-il une assistance clientèle ?
-              <span class="icon" aria-hidden="true"></span>
-            </summary>
-            <div class="answer">
-              Oui. Notre service client est joignable par email ou téléphone du lundi au samedi, de 8h à 18h.
+              <template v-if="key === 'q9'">
+                {{ t('faq.questions.q9.answerPrefix') }} <a href="mailto:support@futatrans.com" class="underline">support@futatrans.com</a>.
+              </template>
+              <template v-else>
+                {{ t('faq.questions.' + key + '.answer') }}
+              </template>
             </div>
           </details>
         </div>
@@ -127,41 +38,129 @@
 </template>
 
 <script setup>
+const { t } = useI18n()
+
+const faqKeys = ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10']
+const faqEntities = faqKeys.map((key) => ({
+  '@context': undefined,
+  '@type': 'Question',
+  name: t('faq.questions.' + key + '.question'),
+  acceptedAnswer: {
+    '@type': 'Answer',
+    text: key === 'q9' ? t('faq.questions.q9.answerPrefix') + ' support@futatrans.com' : t('faq.questions.' + key + '.answer')
+  }
+}))
+
 definePageMeta({
   alias: ["/questions-frequentes", "/aide", "/support"],
 });
 
 useHead({
-  title: "FAQ — FUTA TRANS",
+  title: 'FAQ — FUTA TRANS',
   meta: [
-    {
-      name: "description",
-      content: "Questions fréquentes sur l’application FUTA TRANS.",
-    },
-    { name: "robots", content: "index, follow" },
+    { name: 'description', content: "Questions fréquentes sur FUTA TRANS : paiements, sécurité, retraits, conducteurs et usagers." },
+    { name: 'robots', content: 'index, follow' },
+
+    // Open Graph
+    { property: 'og:type', content: 'article' },
+    { property: 'og:title', content: 'FAQ — FUTA TRANS' },
+    { property: 'og:description', content: "Réponses rapides sur les paiements, la sécurité et l'usage de l'application FUTA TRANS." },
+    { property: 'og:url', content: 'https://futatrans.com/faq' },
+    { property: 'og:image', content: '/cover.png' },
+    { property: 'og:locale', content: 'fr_FR' },
+
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'FAQ — FUTA TRANS' },
+    { name: 'twitter:description', content: "Questions fréquentes : paiements, sécurité, retraits, disponibilité et assistance." },
+    { name: 'twitter:image', content: '/cover.png' }
   ],
+  link: [
+    { rel: 'canonical', href: 'https://futatrans.com/faq' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqEntities
+      })
+    }
+  ]
 });
 
 import { onMounted, onBeforeUnmount } from 'vue'
 
+function animateOpen(detailsEl) {
+  const content = detailsEl.querySelector('.answer')
+  if (!content) return
+  content.style.willChange = 'height'
+  content.style.transition = 'height 300ms ease'
+  content.style.height = '0px'
+  // force reflow
+  void content.offsetHeight
+  content.style.height = content.scrollHeight + 'px'
+  content.style.opacity = '1'
+  content.style.transform = 'translateY(0)'
+  const onEnd = (e) => {
+    if (e.propertyName === 'height') {
+      content.style.transition = ''
+      content.style.height = 'auto'
+      content.removeEventListener('transitionend', onEnd)
+    }
+  }
+  content.addEventListener('transitionend', onEnd)
+}
+
+function animateClose(detailsEl) {
+  const content = detailsEl.querySelector('.answer')
+  if (!content) return
+  content.style.willChange = 'height'
+  content.style.transition = 'height 300ms ease'
+  // set explicit current height
+  content.style.height = content.scrollHeight + 'px'
+  // force reflow
+  void content.offsetHeight
+  content.style.height = '0px'
+  content.style.opacity = '0'
+  content.style.transform = 'translateY(-6px)'
+}
+
 if (process.client) {
   const onToggle = (e) => {
-    const current = e.target;
-    if (!current || !(current instanceof HTMLDetailsElement)) return;
+    const current = e.target
+    if (!current || !(current instanceof HTMLDetailsElement)) return
+
+    // Close others first
     if (current.open) {
       document.querySelectorAll('.faq-item[open]').forEach((el) => {
-        if (el !== current) el.removeAttribute('open');
-      });
+        if (el !== current) {
+          el.removeAttribute('open')
+          animateClose(el)
+        }
+      })
+      // Animate open of current
+      animateOpen(current)
+    } else {
+      // Animate close
+      animateClose(current)
     }
-  };
+  }
 
   onMounted(() => {
-    document.addEventListener('toggle', onToggle, true);
-  });
+    document.addEventListener('toggle', onToggle, true)
+    // Ensure pre-opened items are visually correct
+    document.querySelectorAll('.faq-item[open] .answer').forEach((el) => {
+      el.style.height = 'auto'
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
+    })
+  })
 
   onBeforeUnmount(() => {
-    document.removeEventListener('toggle', onToggle, true);
-  });
+    document.removeEventListener('toggle', onToggle, true)
+  })
 }
 </script>
 
@@ -178,13 +177,15 @@ if (process.client) {
   @apply px-4 md:px-6 py-4;
 }
 
-.faq-item + .faq-item {
-  /* handled by divide-y */
+.faq-item > summary {
+  @apply  text-gray-500 flex items-start justify-between gap-4 text-base md:text-base font-medium cursor-pointer select-none;
+  list-style: none;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 8px;
 }
 
-.faq-item > summary {
-  @apply flex items-start justify-between gap-4 text-base md:text-lg font-medium cursor-pointer select-none;
-  list-style: none;
+.faq-item[open] > summary {
+  color: #0A3A3C;
 }
 
 .faq-item > summary::-webkit-details-marker {
@@ -192,8 +193,14 @@ if (process.client) {
 }
 
 .faq-item .icon {
-  @apply inline-flex items-center justify-center w-5 h-5 text-gray-600;
+  @apply inline-flex items-center justify-center w-5 h-5 text-gray-800;
   position: relative;
+  transition: transform 0.3s ease, color 0.25s ease;
+}
+
+.faq-item[open] .icon {
+  color: #01B180;
+  transform: rotate(0deg);
 }
 
 .faq-item .icon::before,
@@ -223,14 +230,15 @@ if (process.client) {
 }
 
 .answer {
-  @apply text-gray-700 leading-relaxed;
-  max-height: 0;
+  @apply text-gray-700 leading-relaxed mt-2;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.faq-item[open] .answer {
-  max-height: 500px; /* sufficient for typical answers */
-  margin-top: 0.5rem;
+a {
+  @apply text-green-600 font-medium underline;
 }
 </style>

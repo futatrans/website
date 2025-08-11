@@ -80,13 +80,13 @@
 
                 <ul class="text-gray-600 space-y-4 text-sm">
                   <li>
-                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.usagers') }}</NuxtLink>
+                    <NuxtLink to="/#usagers" @click="handleFooterLinkClick" style="text-transform: none !important;">{{ t('footer.navigation.usagers') }}</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.conducteurs') }}</NuxtLink>
+                    <NuxtLink to="/#conducteurs" @click="handleFooterLinkClick" style="text-transform: none !important;">{{ t('footer.navigation.conducteurs') }}</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/" style="text-transform: none !important;">{{ t('footer.navigation.planete') }}</NuxtLink>
+                    <NuxtLink to="/#planete" @click="handleFooterLinkClick" style="text-transform: none !important;">{{ t('footer.navigation.planete') }}</NuxtLink>
                   </li>
                 </ul>
               </div>
@@ -112,9 +112,7 @@
 
                 </div>
                 <ul class="text-gray-600 space-y-4 text-sm">
-                  <li>
-                    <a href="#" style="text-transform: none !important;">{{ t('footer.usefulLinks.about') }}</a>
-                  </li>
+                  
                   <li>
                     <NuxtLink to="/faq" style="text-transform: none !important;">{{ t('footer.usefulLinks.faq') }}</NuxtLink>
                   </li>
@@ -253,6 +251,28 @@ const safeTranslate = (key) => {
   } catch (error) {
     console.warn(`Translation error for key: ${key}`, error)
     return key
+  }
+}
+
+// Gestion du scroll doux vers les sections depuis le footer
+const handleFooterLinkClick = (event) => {
+  if (!process.client) return
+  try {
+    const target = event.currentTarget
+    const href = target && target.getAttribute('href')
+    if (!href || !href.includes('#')) return
+    event.preventDefault()
+    const sectionId = href.replace(/^.*#/, '')
+    const el = document.getElementById(sectionId)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      if (window.location.pathname !== '/') {
+        window.location.href = '/#' + sectionId
+      }
+    }
+  } catch (error) {
+    console.warn('Footer link scroll error:', error)
   }
 }
 </script>

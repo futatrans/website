@@ -197,13 +197,13 @@
                     font-size: 12px;
                     font-weight: 500;
                     transition: all 0.3s ease-in-out !important;
-                    background-image: url(../../assets/images/icon/chevron-right.svg);
+                    background-image: url(/vendors/images/icon/chevron-right.svg);
                     color: $theme-color-2;
                 }
 
                 &:not(.collapsed):after {
                     font-size: 12px;
-                    background-image: url(../../assets/images/icon/chevron-down.svg);
+                    background-image: url(/vendors/images/icon/chevron-down.svg);
                     font-weight: 500;
                     color: $theme-color-2;
                     transform: rotate(0);

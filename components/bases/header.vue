@@ -16,10 +16,10 @@
             </button>
           </div>
         </div>
-        <div class="mobile-menu-nav mb-3">
-          <ul>
+        <div class="mobile-menu-nav mb-3 ">
+          <ul >
             <li v-for="item in navigation" :key="item.name">
-              <a :href="item.href" @click="handleMenuClick" class="mobile-menu-link">
+              <a :href="item.href" @click="handleMobileMenuClick" class="mobile-menu-link">
                 {{ item.name }}
               </a>
             </li>
@@ -114,7 +114,7 @@
           </div>
           
           <div class="header-button mt-4">
-            <a href="#" class="theme-btn text-center" @click="handleMenuClick">
+            <a href="#download-app" class="theme-btn text-center" @click="handleMenuClick">
               <span>{{ t('header.download') }}<i class="fa-solid fa-arrow-right-long"></i></span>
             </a>
           </div>
@@ -148,7 +148,7 @@
                 <div class="mean__menu-wrapper">
                   <div class="main-menu lg:block hidden">
                     <nav>
-                      <ul class="flex space-x-4">
+                      <ul class="flex space-x-4 pl-[150px]">
                         <li v-for="item in navigation" :key="item.name">
                           <a
                             :href="item.href"
@@ -298,9 +298,35 @@ const toggleLanguage = () => {
   }
 }
 
-// Fonction pour gérer les clics sur le menu
+// Fermer simple
 const handleMenuClick = () => {
   mobileMenuOpen.value = false
+}
+
+// Scroll doux + fermeture pour mobile
+const handleMobileMenuClick = (event) => {
+  if (!process.client) return
+  try {
+    const target = event.currentTarget
+    const href = target && target.getAttribute('href')
+    if (href && href.includes('#')) {
+      event.preventDefault()
+      mobileMenuOpen.value = false
+      const sectionId = href.replace(/^.*#/, '')
+      const el = document.getElementById(sectionId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      } else {
+        if (window.location.pathname !== '/') {
+          window.location.href = '/#' + sectionId
+        }
+      }
+    } else {
+      mobileMenuOpen.value = false
+    }
+  } catch (error) {
+    // ignore
+  }
 }
 
 // Gestion des erreurs d'hydratation

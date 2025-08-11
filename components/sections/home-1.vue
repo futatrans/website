@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="intro-section mt-24">
+    <section class="intro-section mt-20 sm:mt-24">
       <div class="intro-container-wrapper style1">
         <div class="container">
           <div class="intro-wrapper style1 fix">

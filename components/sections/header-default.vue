@@ -2,14 +2,17 @@
   <div>
     <section class="bg-white px-3 sm:px-8 mt-2">
       <div
-        class="container z-50 relative overflow-hidden bg-[#0A3A3C] py-20 mt-0 w-full max-w-[1820px] rounded-[50px] px-8"
+        class=" mx-auto z-50 relative overflow-hidden bg-[#0A3A3C] py-20 mt-0 w-full  rounded-[50px] px-8"
+        style="max-width: 1820px !important"
       >
         <div class="text-center z-50 relative">
           <nav
             aria-label="Fil d'ariane"
             class="mb-6 flex items-center justify-center text-sm text-gray-200"
           >
-            <NuxtLink to="/">Accueil</NuxtLink>
+            <NuxtLink to="/"
+              ><span class="text-gray-200"> Accueil </span></NuxtLink
+            >
             <span class="mx-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

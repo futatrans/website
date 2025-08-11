@@ -111,5 +111,202 @@
       "location": "📍 Kinshasa-Gombe"
     },
     "copyright": "Copyright © 2024 FUTA TRANS. All rights reserved."
+  },
+  "faq": {
+    "header": {
+      "titleMin": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "intro": "Find quick answers to the most common questions about FUTA TRANS.",
+    "questions": {
+      "q1": {
+        "question": "How do I pay for a ride?",
+        "answer": "Scan the driver's QR Code or enter their ID. Confirm the amount — done!"
+      },
+      "q2": {
+        "question": "I am a driver. How do I collect payments?",
+        "answer": "Create a FUTA TRANS account, generate your QR code or unique code, and start collecting payments."
+      },
+      "q3": {
+        "question": "Is my money safe?",
+        "answer": "Yes. All payments are secured with licensed partners (Mobile Money, banks). Your data is encrypted."
+      },
+      "q4": {
+        "question": "Can I withdraw received funds?",
+        "answer": "Yes. You can transfer your balance to your bank account or Mobile Money wallet at any time."
+      },
+      "q5": {
+        "question": "How do I top up my wallet?",
+        "answer": "Top up your FUTA TRANS wallet securely via Mobile Money (M-Pesa, Orange Money, Airtel Money…) or bank card (VISA, MasterCard)."
+      },
+      "q6": {
+        "question": "Where is FUTA TRANS available?",
+        "answer": "We are present in Kinshasa and expanding to other major cities in DRC."
+      },
+      "q7": {
+        "question": "Does FUTA TRANS work offline?",
+        "answer": "An Internet connection is required to use the app. Some features (history, balance) may be temporarily available offline."
+      },
+      "q8": {
+        "question": "Can I cancel a payment after sending?",
+        "answer": "No. Once confirmed, a payment is irreversible. Always double-check details before confirming."
+      },
+      "q9": {
+        "question": "How do I report an issue with a driver or passenger?",
+        "answerPrefix": "Use the report feature in the app or write to"
+      },
+      "q10": {
+        "question": "Does FUTA TRANS offer customer support?",
+        "answer": "Yes. Our support team is available by email or phone Monday to Saturday, 8am to 6pm."
+      }
+    }
+  },
+  "policy": {
+    "header": {
+      "titleMin": "Policy",
+      "title": "Privacy Policy",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "version": "Version 1.0 — Last updated: August 1, 2025",
+    "intro1": "At FUTA TRANS, we are committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, share, and protect your information when you use our mobile app to pay for rides.",
+    "intro2": "Our goal is to provide a secure and transparent payment service while strictly respecting your privacy.",
+    "sections": {
+      "collectedData": {
+        "title": "1. The data we collect",
+        "intro": "To provide our payment service, we collect the following types of information:",
+        "items": {
+          "personal": "Personal information: name, phone number, email address — required to secure your account.",
+          "payment": "Payment information: data needed to process your transactions (Mobile Money, bank card), handled by certified providers.",
+          "usage": "Usage data: payment history, amounts, frequency — to improve the service and prevent fraud.",
+          "technical": "Technical data: device type, model, OS version, and app version — to ensure compatibility.",
+          "location": "Geolocation information: collected with your explicit consent to enhance security."
+        }
+      },
+      "useOfData": {
+        "title": "2. How and why we use your data",
+        "intro": "Your information is essential for the following purposes:",
+        "items": {
+          "execution": "Payment execution: process and validate your transactions quickly and securely.",
+          "security": "Security and authentication: protect your account and prevent fraudulent activities.",
+          "improvement": "Service improvement: analyze usage to optimize the platform.",
+          "communication": "Communication: important notifications related to your transactions and security.",
+          "legal": "Legal compliance: obligations regarding anti-money laundering, fraud, and counter-terrorism financing.",
+          "offers": "Personalized offers: with your consent, tailored proposals (loyalty, partner financial services)."
+        }
+      },
+      "sharing": {
+        "title": "3. Data sharing",
+        "intro": "We prioritize your privacy. We do not sell or rent your personal information. It may be shared only with:",
+        "items": {
+          "providers": "Technical providers: payment, hosting, security — bound by strict confidentiality commitments.",
+          "partners": "Financial or institutional partners: with your explicit consent, for specific services (leasing, credit).",
+          "authorities": "Regulatory authorities: when required by law (warrant, official investigation, etc.)."
+        }
+      },
+      "security": {
+        "title": "4. Data security",
+        "text": "Rigorous technical and organizational measures: encryption at rest and in transit, firewalls, and strict access controls."
+      },
+      "rights": {
+        "title": "5. Your rights",
+        "intro": "You remain in control of your personal data. Under applicable laws, you have the following rights:",
+        "items": {
+          "access": "Right of access: obtain a copy of your personal data.",
+          "rectification": "Right to rectification: correct or update your information.",
+          "erasure": "Right to erasure: delete your account and data, subject to legal obligations.",
+          "withdraw": "Right to withdraw consent: for example, for geolocation data."
+        },
+        "contactText": "To exercise your rights or for any questions, contact us:"
+      }
+    },
+    "emails": {
+      "privacy": "privacy@futatrans.com"
+    }
+  },
+  "cgu": {
+    "header": {
+      "titleMin": "T&Cs",
+      "title": "Terms and Conditions of Use",
+      "description": "FUTA TRANS – Version 1.0"
+    },
+    "lastUpdate": "Last updated: August 1, 2025",
+    "intro": "These Terms and Conditions govern access to and use of the FUTA TRANS mobile app by all users, whether passengers or drivers.",
+    "sections": {
+      "object": {
+        "title": "1. Purpose",
+        "text": "FUTA TRANS enables passengers to pay for rides (motorcycle taxis, taxis, etc.) and drivers to securely collect these payments."
+      },
+      "acceptance": {
+        "title": "2. Acceptance",
+        "text": "By downloading, installing, or using the app, you unreservedly accept these Terms and Conditions."
+      },
+      "registration": {
+        "title": "3. Registration",
+        "items": {
+          "free": "Registration is free for all users.",
+          "accurate": "Provide accurate and up-to-date information (name, phone, email…).",
+          "single": "Only one account is allowed per user."
+        }
+      },
+      "passengers": {
+        "title": "4. Use by passengers",
+        "servicesTitle": "4.1 Offered services",
+        "services": {
+          "recharge": "Top up your wallet via Mobile Money or bank card.",
+          "pay": "Pay for rides via QR Code or driver ID.",
+          "history": "View your payment history.",
+          "receipt": "Receive an electronic proof of payment."
+        },
+        "obligationsTitle": "4.2 Passenger obligations",
+        "obligations": {
+          "noFraud": "Do not falsify information or perform fraudulent payments.",
+          "paymentRules": "Follow the payment conditions defined by the app.",
+          "fairUse": "Use the service fairly and securely."
+        }
+      },
+      "drivers": {
+        "title": "5. Use by drivers",
+        "servicesTitle": "5.1 Offered services",
+        "services": {
+          "collect": "Collect a payment via QR Code or unique ID.",
+          "track": "Track daily, weekly and monthly income.",
+          "withdraw": "Withdraw funds via Mobile Money or bank account.",
+          "programs": "Access exclusive programs (leasing, training, etc.).",
+          "statements": "Generate statements as proof of income."
+        },
+        "obligationsTitle": "5.2 Driver obligations",
+        "obligations": {
+          "truth": "Provide truthful information about identity and activity.",
+          "realUse": "Use the app only for actual transport services.",
+          "courtesy": "Respect driving rules, safety and courtesy toward passengers."
+        }
+      },
+      "accounts": {
+        "title": "6. Account access and suspension",
+        "intro": "FUTA TRANS may suspend or close any account in case of:",
+        "items": {
+          "fraud": "Fraudulent or illegal use of the app.",
+          "breach": "Serious breach of these Terms and Conditions.",
+          "behavior": "Threatening, insulting or dangerous behavior towards other users."
+        }
+      },
+      "availability": {
+        "title": "7. Service availability",
+        "text": "Service available 24/7, except in cases of force majeure, maintenance or technical incidents beyond our control. No compensation for temporary interruption."
+      },
+      "liability": {
+        "title": "8. Liability",
+        "text": "FUTA TRANS cannot be held responsible for disputes between passengers and drivers outside the app."
+      },
+      "data": {
+        "title": "9. Data protection",
+        "text": "Data is processed in accordance with our Privacy Policy. Rights of access, modification and deletion apply."
+      },
+      "changes": {
+        "title": "10. Changes to the T&Cs",
+        "text": "FUTA TRANS may modify the T&Cs at any time. Any change will be notified through the app. Continued use constitutes acceptance."
+      }
+    }
   }
 } 
