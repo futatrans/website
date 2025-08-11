@@ -2,7 +2,7 @@
   <div class="relative">
     <div id="usagers" class="-top-[200px] absolute"></div>
     <!-- About Us Section S T A R T -->
-    <section class="about-section fix -mt-16">
+    <section class="about-section fix -mt-16 sm:-mt-0">
       <div class="about-container-wrapper style1">
         <div class="container ">
           <div class="about-wrapper style1">
